@@ -9,6 +9,18 @@
     "goHome": "Go to home page",
     "goToProducts": "Go to Products"
   },
+  "breadcrumb": {
+    "label": "You are here",
+    "home": "Home"
+  },
+  "serviceUi": {
+    "processEyebrow": "How we work",
+    "faqAnchor": "Frequently asked questions",
+    "highlights": "Highlights",
+    "responseTime": "Reply within 24 business hours",
+    "contactCardLabel": "Talk to us",
+    "contactDisclaimer": "No strings attached. The code is 100% yours and the schedule is set after the assessment."
+  },
   "megamenu": {
     "services": {
       "title": "Our Services",
@@ -434,23 +446,23 @@
   "servicesPages": {
     "software": {
       "meta": {
-        "title": "Custom Automation | Lecabe",
+        "title": "Custom Automation",
         "description": "We build tailored automations to eliminate manual processes and accelerate your operations."
       },
       "hero": {
         "title": "Eliminate manual processes with custom automation",
         "subtitle": "We transform repetitive workflows into automated systems that save time, reduce errors and free your team to focus on what truly matters.",
         "cta": "Schedule a free assessment",
-        "visualMetrics": ["Custom-built", "Integrations", "Zero errors", "Fast ROI"]
+        "visualMetrics": ["Custom-built", "Integrations", "Workflows", "Dashboards"]
       },
       "metrics": {
         "title": "Results from our automations",
         "subtitle": "Real impact on our clients' operations",
         "items": [
           { "value": "30+", "label": "Automations delivered" },
-          { "value": "15h+", "label": "Average weekly savings" },
-          { "value": "99.5%", "label": "Automation uptime" },
-          { "value": "0", "label": "Manual errors" }
+          { "value": "100%", "label": "Source code handed over to the client" },
+          { "value": "24h", "label": "Response time" },
+          { "value": "Free", "label": "Initial assessment" }
         ]
       },
       "overview": {
@@ -564,7 +576,7 @@
     },
     "cloud": {
       "meta": {
-        "title": "Infrastructure & Integration | Lecabe",
+        "title": "Infrastructure & Integration",
         "description": "We connect your systems and build cloud infrastructure for your automations to run securely and at scale."
       },
       "hero": {
@@ -578,9 +590,9 @@
         "subtitle": "Integrated systems running securely and at scale",
         "items": [
           { "value": "20+", "label": "Integrations implemented" },
-          { "value": "30%", "label": "Average cost reduction" },
           { "value": "24/7", "label": "Monitoring" },
-          { "value": "99.5%", "label": "Availability" }
+          { "value": "100%", "label": "Source code handed over to the client" },
+          { "value": "24h", "label": "Response time" }
         ]
       },
       "overview": {
@@ -668,11 +680,11 @@
         },
         "q2": {
           "question": "Will the migration stop my operations?",
-          "answer": "No. We perform incremental migrations with zero downtime. Your old system continues running throughout the transition, with guaranteed rollback in case of any issues."
+          "answer": "No. We perform incremental migrations: your old system continues running throughout the transition, with guaranteed rollback in case of any issues."
         },
         "q3": {
-          "question": "How much can I save by migrating to the cloud?",
-          "answer": "On average, our clients reduce infrastructure costs by 30% to 50% through resource optimization, auto-scaling and elimination of idle servers."
+          "question": "How do you assess whether migrating is worth it?",
+          "answer": "We measure what your infrastructure costs today — servers, licences and maintenance hours — and compare it against the cloud scenario, accounting for resource optimization, auto-scaling and shutting down idle machines. The figure comes out of that assessment, not from a market average."
         },
         "q4": {
           "question": "Do you integrate with legacy systems?",
@@ -688,7 +700,7 @@
     },
     "ux": {
       "meta": {
-        "title": "Interfaces & Dashboards | Lecabe",
+        "title": "Interfaces & Dashboards",
         "description": "We create intuitive interfaces and control panels so your team can operate automations with ease."
       },
       "hero": {
@@ -701,10 +713,10 @@
         "title": "Interfaces your team actually adopts",
         "subtitle": "Proven results in usability and tool adoption",
         "items": [
-          { "value": "80%", "label": "Increase in adoption" },
-          { "value": "50%", "label": "Fewer operational errors" },
-          { "value": "20h+", "label": "Testing per project" },
-          { "value": "WCAG AA", "label": "Accessibility" }
+          { "value": "100%", "label": "Tested with real users" },
+          { "value": "Figma", "label": "Navigable prototypes" },
+          { "value": "WCAG AA", "label": "Accessibility" },
+          { "value": "24h", "label": "Response time" }
         ]
       },
       "overview": {
@@ -818,12 +830,12 @@
     },
     "ai": {
       "meta": {
-        "title": "AI Consulting | Lecabe",
+        "title": "AI Consulting",
         "description": "We analyze your operations and implement artificial intelligence where it truly makes a difference."
       },
       "hero": {
         "title": "Artificial intelligence applied to your business",
-        "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence generates real impact and implement solutions that demonstrably reduce costs and increase efficiency.",
+        "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence makes a difference and implement only what holds up in your context.",
         "cta": "Schedule AI consulting",
         "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "AI Automation"]
       },
@@ -831,10 +843,10 @@
         "title": "AI that generates real returns",
         "subtitle": "Proven results from AI consulting and implementation",
         "items": [
-          { "value": "30%", "label": "Average cost reduction" },
           { "value": "10+", "label": "AI implementations delivered" },
-          { "value": "95%+", "label": "Model accuracy" },
-          { "value": "2x", "label": "Average return on investment" }
+          { "value": "100%", "label": "Source code handed over to the client" },
+          { "value": "24h", "label": "Response time" },
+          { "value": "Free", "label": "Initial consultation" }
         ]
       },
       "overview": {

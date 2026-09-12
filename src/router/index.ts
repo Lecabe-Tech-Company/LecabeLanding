@@ -6,6 +6,17 @@ import HomeView from '../views/HomeView.vue'
 import PrivacyPolicyView from '../views/PrivacyPolicyView.vue'
 import TermsOfServiceView from '../views/TermsOfServiceView.vue'
 
+import type { ServiceId } from '@/types/service'
+
+const ServiceView = () => import('../views/services/ServiceView.vue')
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    /** Set on the four service routes; selects the content ServiceView renders. */
+    serviceId?: ServiceId
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -42,25 +53,31 @@ const router = createRouter({
       name: 'services-overview',
       component: () => import('../views/services/ServicesOverviewView.vue')
     },
+    // The four service pages share one data-driven view; `meta.serviceId`
+    // selects which service's content it renders.
     {
       path: '/servicos/desenvolvimento-software',
       name: 'service-software',
-      component: () => import('../views/services/ServiceSoftwareView.vue')
+      component: ServiceView,
+      meta: { serviceId: 'software' }
     },
     {
       path: '/servicos/cloud',
       name: 'service-cloud',
-      component: () => import('../views/services/ServiceCloudView.vue')
+      component: ServiceView,
+      meta: { serviceId: 'cloud' }
     },
     {
       path: '/servicos/ux-design',
       name: 'service-ux',
-      component: () => import('../views/services/ServiceUXView.vue')
+      component: ServiceView,
+      meta: { serviceId: 'ux' }
     },
     {
       path: '/servicos/inteligencia-artificial',
       name: 'service-ai',
-      component: () => import('../views/services/ServiceAIView.vue')
+      component: ServiceView,
+      meta: { serviceId: 'ai' }
     },
     {
       path: '/empresa',
