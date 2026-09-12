@@ -9,6 +9,18 @@
     "goHome": "Go to home page",
     "goToProducts": "Go to Products"
   },
+  "breadcrumb": {
+    "label": "You are here",
+    "home": "Home"
+  },
+  "serviceUi": {
+    "processEyebrow": "How we work",
+    "faqAnchor": "Frequently asked questions",
+    "highlights": "Highlights",
+    "responseTime": "Reply within 24 business hours",
+    "contactCardLabel": "Talk to us",
+    "contactDisclaimer": "No strings attached. The code is 100% yours and the schedule is set after the assessment."
+  },
   "megamenu": {
     "services": {
       "title": "Our Services",
@@ -434,7 +446,7 @@
   "servicesPages": {
     "software": {
       "meta": {
-        "title": "Custom Automation | Lecabe",
+        "title": "Custom Automation",
         "description": "We build tailored automations to eliminate manual processes and accelerate your operations."
       },
       "hero": {
@@ -448,9 +460,9 @@
         "subtitle": "Real impact on our clients' operations",
         "items": [
           { "value": "30+", "label": "Automations delivered" },
-          { "value": "15h+", "label": "Average weekly savings" },
+          { "value": "100%", "label": "Source code handed over to the client" },
           { "value": "99.5%", "label": "Automation uptime" },
-          { "value": "0", "label": "Manual errors" }
+          { "value": "24h", "label": "Response time" }
         ]
       },
       "overview": {
@@ -564,7 +576,7 @@
     },
     "cloud": {
       "meta": {
-        "title": "Infrastructure & Integration | Lecabe",
+        "title": "Infrastructure & Integration",
         "description": "We connect your systems and build cloud infrastructure for your automations to run securely and at scale."
       },
       "hero": {
@@ -578,7 +590,7 @@
         "subtitle": "Integrated systems running securely and at scale",
         "items": [
           { "value": "20+", "label": "Integrations implemented" },
-          { "value": "30%", "label": "Average cost reduction" },
+          { "value": "0", "label": "Downtime during migrations" },
           { "value": "24/7", "label": "Monitoring" },
           { "value": "99.5%", "label": "Availability" }
         ]
@@ -688,7 +700,7 @@
     },
     "ux": {
       "meta": {
-        "title": "Interfaces & Dashboards | Lecabe",
+        "title": "Interfaces & Dashboards",
         "description": "We create intuitive interfaces and control panels so your team can operate automations with ease."
       },
       "hero": {
@@ -701,8 +713,8 @@
         "title": "Interfaces your team actually adopts",
         "subtitle": "Proven results in usability and tool adoption",
         "items": [
-          { "value": "80%", "label": "Increase in adoption" },
-          { "value": "50%", "label": "Fewer operational errors" },
+          { "value": "100%", "label": "Tested with real users" },
+          { "value": "Figma", "label": "Navigable prototypes" },
           { "value": "20h+", "label": "Testing per project" },
           { "value": "WCAG AA", "label": "Accessibility" }
         ]
@@ -818,7 +830,7 @@
     },
     "ai": {
       "meta": {
-        "title": "AI Consulting | Lecabe",
+        "title": "AI Consulting",
         "description": "We analyze your operations and implement artificial intelligence where it truly makes a difference."
       },
       "hero": {
@@ -831,10 +843,10 @@
         "title": "AI that generates real returns",
         "subtitle": "Proven results from AI consulting and implementation",
         "items": [
-          { "value": "30%", "label": "Average cost reduction" },
+          { "value": "ROI", "label": "Prioritised by the return estimated for your case" },
           { "value": "10+", "label": "AI implementations delivered" },
           { "value": "95%+", "label": "Model accuracy" },
-          { "value": "2x", "label": "Average return on investment" }
+          { "value": "Prod.", "label": "Models monitored in production" }
         ]
       },
       "overview": {

@@ -1,105 +1,108 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import GlassCard from '@/components/ui/GlassCard.vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 interface Metric {
   value: string
   label: string
-  icon?: string
 }
 
-interface Props {
-  metrics: Metric[]
-  animated?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<{ metrics: Metric[]; animated?: boolean }>(), {
   animated: true
 })
 
-const animatedValues = ref<Record<number, string>>({})
-const hasAnimated = ref(false)
+/**
+ * Only values shaped like a single integer with optional affixes count up
+ * ("30+", "100%", "24h"). Anything else — "99.5%", "24/7", "WCAG AA", "Figma" —
+ * is rendered as-is, because a partially counted value reads as a wrong number.
+ */
+const COUNTABLE = /^(\D*)(\d+)(\D*)$/
 
-const animateValue = (index: number, endValue: string) => {
-  const numericMatch = endValue.match(/(\d+)/)
-  if (!numericMatch || !props.animated) {
-    animatedValues.value[index] = endValue
-    return
-  }
+const root = ref<HTMLElement | null>(null)
+const displayed = ref<string[]>([])
 
-  const targetNum = parseInt(numericMatch[1])
-  const prefix = endValue.substring(0, endValue.indexOf(numericMatch[1]))
-  const suffix = endValue.substring(endValue.indexOf(numericMatch[1]) + numericMatch[1].length)
+const shouldAnimate = computed(
+  () =>
+    props.animated &&
+    typeof window !== 'undefined' &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+)
 
+let observer: IntersectionObserver | null = null
+const timers: ReturnType<typeof setInterval>[] = []
+
+const countUp = (index: number, prefix: string, target: number, suffix: string): void => {
+  const steps = 40
+  const increment = target / steps
   let current = 0
-  const duration = 1500
-  const steps = 50
-  const increment = targetNum / steps
-  const stepDuration = duration / steps
 
   const timer = setInterval(() => {
     current += increment
-    if (current >= targetNum) {
-      current = targetNum
+    if (current >= target) {
+      current = target
       clearInterval(timer)
     }
-    animatedValues.value[index] = prefix + Math.floor(current) + suffix
-  }, stepDuration)
+    displayed.value[index] = `${prefix}${Math.floor(current)}${suffix}`
+  }, 1200 / steps)
+
+  timers.push(timer)
+}
+
+const start = (): void => {
+  props.metrics.forEach((metric, index) => {
+    const match = COUNTABLE.exec(metric.value)
+    if (!match) return
+    setTimeout(() => countUp(index, match[1], Number(match[2]), match[3]), index * 90)
+  })
 }
 
 onMounted(() => {
-  if (!props.animated) {
-    props.metrics.forEach((metric, index) => {
-      animatedValues.value[index] = metric.value
-    })
-    return
-  }
+  displayed.value = props.metrics.map(metric =>
+    shouldAnimate.value && COUNTABLE.test(metric.value) ? metric.value.replace(/\d+/, '0') : metric.value
+  )
 
-  props.metrics.forEach((_, index) => {
-    animatedValues.value[index] = '0'
-  })
+  if (!shouldAnimate.value || !root.value) return
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated.value) {
-          hasAnimated.value = true
-          props.metrics.forEach((metric, index) => {
-            setTimeout(() => {
-              animateValue(index, metric.value)
-            }, index * 100)
-          })
-        }
-      })
+  observer = new IntersectionObserver(
+    entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return
+      observer?.disconnect()
+      observer = null
+      start()
     },
     { threshold: 0.3 }
   )
+  observer.observe(root.value)
+})
 
-  const section = document.getElementById('service-metrics')
-  if (section) {
-    observer.observe(section)
-  }
+onBeforeUnmount(() => {
+  observer?.disconnect()
+  timers.forEach(clearInterval)
 })
 </script>
 
 <template>
+  <!-- Always two columns: four metrics read as a balanced block beside the
+       headline, instead of breaking 3 + 1 on mid-width columns. -->
   <div
-    id="service-metrics"
-    class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+    ref="root"
+    class="grid grid-cols-2 gap-3"
   >
-    <GlassCard
+    <div
       v-for="(metric, index) in metrics"
-      :key="index"
-      padding="md"
-      class="text-center hover:scale-105 transition-transform duration-300"
+      :key="metric.label"
+      v-reveal="index * 80"
+      class="flex flex-col gap-1.5 rounded-2xl border border-gray-900/10 bg-white p-5 shadow-[0_1px_2px_rgba(30,30,80,.06),0_6px_20px_rgba(30,30,80,.07)] dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none"
     >
-      <div class="text-3xl md:text-4xl font-black text-gradient-animated mb-2 tabular-nums">
-        {{ animatedValues[index] || metric.value }}
+      <div
+        class="text-[30px] font-extrabold leading-none tracking-[-0.02em] tabular-nums"
+        :class="index % 2 ? 'text-gray-900 dark:text-white' : 'text-brand-primary dark:text-brand-light-primary'"
+      >
+        {{ displayed[index] ?? metric.value }}
       </div>
-      <div class="text-sm text-gray-600 dark:text-gray-400 font-medium leading-tight">
+      <div class="text-[13px] font-medium leading-snug text-gray-600 dark:text-gray-400">
         {{ metric.label }}
       </div>
-    </GlassCard>
+    </div>
   </div>
 </template>
 
