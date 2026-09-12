@@ -10,7 +10,7 @@ defineProps<{ items: FAQ[] }>()
       v-for="(item, index) in items"
       :key="item.question"
       v-reveal="index * 60"
-      class="service-faq rounded-[14px] border border-gray-900/[0.08] bg-brand-light px-[18px] dark:border-white/10 dark:bg-white/[0.04]"
+      class="faq-item rounded-[14px] border border-gray-900/[0.08] bg-brand-light px-[18px] dark:border-white/10 dark:bg-white/[0.04]"
     >
       <summary
         class="flex cursor-pointer items-center justify-between gap-3.5 py-4 text-[15px] font-bold text-gray-900 dark:text-white"
@@ -18,7 +18,7 @@ defineProps<{ items: FAQ[] }>()
         {{ item.question }}
         <span class="flex-none text-brand-primary dark:text-brand-light-primary">
           <svg
-            class="service-faq__chevron"
+            class="faq-item__chevron"
             width="18"
             height="18"
             viewBox="0 0 24 24"
@@ -43,19 +43,19 @@ defineProps<{ items: FAQ[] }>()
 <style scoped>
 /* Native <details> keeps the answer in the DOM for crawlers and for in-page
    find, which is exactly what the FAQPage structured data promises. */
-.service-faq > summary {
+.faq-item > summary {
   list-style: none;
 }
 
-.service-faq > summary::-webkit-details-marker {
+.faq-item > summary::-webkit-details-marker {
   display: none;
 }
 
-.service-faq__chevron {
+.faq-item__chevron {
   transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.service-faq[open] .service-faq__chevron {
+.faq-item[open] .faq-item__chevron {
   transform: rotate(180deg);
 }
 </style>

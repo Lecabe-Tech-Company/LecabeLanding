@@ -101,15 +101,22 @@
     }
   },
   "hero": {
-    "title": "Automatize o que sua empresa ainda faz manualmente",
-    "subtitle": "Desenvolvemos soluções personalizadas para eliminar processos manuais, reduzir custos operacionais e acelerar resultados — com ou sem inteligência artificial.",
+    "title": "Descubra o que vale automatizar na sua operação",
+    "subtitle": "Mapeamos seus processos junto com sua equipe e mostramos, com dados do seu dia a dia, onde a automação faz sentido — antes de qualquer proposta. Com ou sem inteligência artificial.",
     "cta": "Agendar diagnóstico gratuito",
     "ctaSecondary": "Ver nossos serviços",
-    "trustedBy": "Empresas que já automatizaram conosco"
+    "trustedBy": "Empresas que já automatizaram conosco",
+    "badge": "Diagnóstico gratuito · resposta em até 24h úteis",
+    "guarantees": [
+      "Código 100% seu",
+      "Cronograma definido após o diagnóstico",
+      "Suporte e monitoramento contínuos"
+    ],
+    "whatsappMessage": "Olá! Gostaria de agendar um diagnóstico gratuito para avaliar os processos da minha empresa."
   },
   "about": {
-    "title": "Por que a Lecabe?",
-    "content": "Somos especialistas em identificar gargalos operacionais e transformá-los em fluxos automatizados. Cada solução que entregamos é projetada sob medida para a realidade da sua empresa — sem ferramentas genéricas que não se encaixam no seu processo.",
+    "title": "Transparência do diagnóstico à entrega",
+    "content": "Não chegamos com uma resposta pronta. Antes de propor qualquer coisa, entendemos como o seu processo funciona hoje, com quem e em quais sistemas — e só então definimos o que vale automatizar.",
     "differentiators": {
       "family": {
         "title": "Atendimento próximo",
@@ -120,9 +127,16 @@
         "description": "Nada de software de prateleira. Cada automação é desenhada para o seu fluxo específico."
       },
       "partnership": {
-        "title": "Resultados mensuráveis",
-        "description": "Nosso compromisso é com o impacto real: menos horas gastas, menos erros, mais velocidade."
+        "title": "Decisão baseada no seu processo",
+        "description": "Medimos o processo atual antes de propor. Você compara o antes e o depois com números do seu próprio negócio, não com médias de mercado."
       }
+    },
+    "eyebrow": "Por que a Lecabe",
+    "diagnosis": {
+      "title": "O diagnóstico responde",
+      "q1": "Quais tarefas da sua equipe são repetitivas e seguem regras claras?",
+      "q2": "Quais sistemas ainda trocam dados por planilha, e-mail ou digitação?",
+      "q3": "O que automatizar primeiro — e o que não vale a pena?"
     }
   },
   "metrics": {
@@ -136,7 +150,7 @@
       },
       "satisfaction": {
         "value": "100%",
-        "label": "Satisfação dos clientes"
+        "label": "Código entregue ao cliente"
       },
       "support": {
         "value": "24/7",
@@ -260,7 +274,7 @@
     "steps": {
       "discovery": {
         "title": "Diagnóstico",
-        "description": "Mapeamos seus processos atuais, identificamos gargalos e calculamos o potencial de economia com automação."
+        "description": "Mapeamos seus processos com a sua equipe e identificamos, com dados reais da operação, quais etapas vale automatizar."
       },
       "requirements": {
         "title": "Planejamento",
@@ -278,7 +292,23 @@
         "title": "Ativação & Suporte",
         "description": "Colocamos em produção, monitoramos os resultados e ajustamos conforme necessário."
       }
-    }
+    },
+    "summary": "5 etapas · total de 6 a 14 semanas",
+    "durations": ["1–2 semanas", "1 semana", "1–2 semanas", "2–8 semanas", "contínuo"],
+    "guarantees": [
+      {
+        "title": "Propriedade total",
+        "description": "Repositório, documentação e infraestrutura entregues a você."
+      },
+      {
+        "title": "Prazos claros",
+        "description": "Automações simples em 2–4 semanas; complexas em 2–3 meses."
+      },
+      {
+        "title": "Suporte contínuo",
+        "description": "Monitoramento em produção; se o processo mudar, ajustamos."
+      }
+    ]
   },
   "marketplace": {
     "title": "Produtos",
@@ -459,10 +489,22 @@
         "title": "Resultados das nossas automações",
         "subtitle": "Impacto real nas operações dos nossos clientes",
         "items": [
-          { "value": "30+", "label": "Automações entregues" },
-          { "value": "100%", "label": "Código entregue ao cliente" },
-          { "value": "24h", "label": "Prazo de resposta" },
-          { "value": "Grátis", "label": "Diagnóstico inicial" }
+          {
+            "value": "30+",
+            "label": "Automações entregues"
+          },
+          {
+            "value": "100%",
+            "label": "Código entregue ao cliente"
+          },
+          {
+            "value": "24h",
+            "label": "Prazo de resposta"
+          },
+          {
+            "value": "Grátis",
+            "label": "Diagnóstico inicial"
+          }
         ]
       },
       "overview": {
@@ -589,10 +631,22 @@
         "title": "Infraestrutura que conecta tudo",
         "subtitle": "Sistemas integrados rodando com segurança e escala",
         "items": [
-          { "value": "20+", "label": "Integrações implementadas" },
-          { "value": "24/7", "label": "Monitoramento" },
-          { "value": "100%", "label": "Código entregue ao cliente" },
-          { "value": "24h", "label": "Prazo de resposta" }
+          {
+            "value": "20+",
+            "label": "Integrações implementadas"
+          },
+          {
+            "value": "24/7",
+            "label": "Monitoramento"
+          },
+          {
+            "value": "100%",
+            "label": "Código entregue ao cliente"
+          },
+          {
+            "value": "24h",
+            "label": "Prazo de resposta"
+          }
         ]
       },
       "overview": {
@@ -713,10 +767,22 @@
         "title": "Interfaces que sua equipe adota",
         "subtitle": "Resultados comprovados em usabilidade e adoção de ferramentas",
         "items": [
-          { "value": "100%", "label": "Testado com usuários reais" },
-          { "value": "Figma", "label": "Protótipos navegáveis" },
-          { "value": "WCAG AA", "label": "Acessibilidade" },
-          { "value": "24h", "label": "Prazo de resposta" }
+          {
+            "value": "100%",
+            "label": "Testado com usuários reais"
+          },
+          {
+            "value": "Figma",
+            "label": "Protótipos navegáveis"
+          },
+          {
+            "value": "WCAG AA",
+            "label": "Acessibilidade"
+          },
+          {
+            "value": "24h",
+            "label": "Prazo de resposta"
+          }
         ]
       },
       "overview": {
@@ -843,10 +909,22 @@
         "title": "IA que gera retorno real",
         "subtitle": "Resultados comprovados de consultoria e implementação de IA",
         "items": [
-          { "value": "10+", "label": "Implementações de IA realizadas" },
-          { "value": "100%", "label": "Código entregue ao cliente" },
-          { "value": "24h", "label": "Prazo de resposta" },
-          { "value": "Grátis", "label": "Consultoria inicial" }
+          {
+            "value": "10+",
+            "label": "Implementações de IA realizadas"
+          },
+          {
+            "value": "100%",
+            "label": "Código entregue ao cliente"
+          },
+          {
+            "value": "24h",
+            "label": "Prazo de resposta"
+          },
+          {
+            "value": "Grátis",
+            "label": "Consultoria inicial"
+          }
         ]
       },
       "overview": {
@@ -1246,5 +1324,90 @@
   "terms": {
     "title": "Termos de Serviço",
     "lastUpdated": "Última atualização: Março 2026"
+  },
+  "console": {
+    "label": "Exemplo ilustrativo de uma automação em execução",
+    "caption": "Exemplo · Faturamento mensal",
+    "status": "Em execução",
+    "cycle": "Ciclo de hoje",
+    "cycleOf": "de {total} notas emitidas",
+    "lastRun": "Última execução",
+    "progress": "Progresso do ciclo",
+    "logTitle": "Registro de atividades",
+    "steps": ["Pedidos lidos", "Validados", "Enviados ao ERP", "Notas emitidas"],
+    "kpis": ["execuções hoje", "sistemas integrados", "intervenção manual"],
+    "events": [
+      {
+        "text": "Pedido #4821 lido do ERP",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "CNPJ validado na Receita",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Nota fiscal 000312 emitida",
+        "tag": "NF-e",
+        "tone": "info"
+      },
+      {
+        "text": "E-mail enviado ao cliente",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Planilha financeira atualizada",
+        "tag": "SYNC",
+        "tone": "info"
+      },
+      {
+        "text": "Pedido #4822 lido do ERP",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Divergência de valor sinalizada",
+        "tag": "REVISÃO",
+        "tone": "warn"
+      },
+      {
+        "text": "Nota fiscal 000313 emitida",
+        "tag": "NF-e",
+        "tone": "info"
+      }
+    ]
+  },
+  "servicesCarousel": {
+    "eyebrow": "O que fazemos",
+    "cardCta": "Ver detalhes",
+    "prev": "Serviço anterior",
+    "next": "Próximo serviço",
+    "bullets": {
+      "software": [
+        "Workflows e aprovações automáticas",
+        "APIs e integrações entre sistemas",
+        "Processamento de dados e relatórios"
+      ],
+      "cloud": [
+        "ERPs, CRMs e planilhas conectados",
+        "Monitoramento 24/7 e alertas",
+        "Migração incremental, sem parar a operação"
+      ],
+      "ux": ["Dashboards operacionais", "Testes com usuários reais", "Acessibilidade WCAG AA"],
+      "ai": [
+        "Priorização pelo seu caso, não por modismo",
+        "Chatbots e processamento de linguagem",
+        "Modelos em produção com monitoramento"
+      ]
+    }
+  },
+  "contactHome": {
+    "eyebrow": "Contato",
+    "whatsappTitle": "Falar agora pelo WhatsApp",
+    "whatsappSubtitle": "+55 (11) 99413-2821 · Seg–Sex, 9h às 18h",
+    "submit": "Enviar pelo WhatsApp",
+    "note": "Sua mensagem abre no WhatsApp já preenchida. Respondemos em até 24 horas úteis."
   }
 }

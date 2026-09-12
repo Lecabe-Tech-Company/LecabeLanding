@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ServiceIcon from '@/components/services/ServiceIcon.vue'
+import LineIcon from '@/components/ui/LineIcon.vue'
 import type { ServiceFeature } from '@/types/service'
 
 defineProps<{ features: ServiceFeature[] }>()
@@ -19,7 +19,7 @@ defineProps<{ features: ServiceFeature[] }>()
       <span
         class="inline-flex h-10 w-10 items-center justify-center rounded-[10px] bg-brand-primary/10 text-brand-primary dark:bg-brand-light-primary/15 dark:text-brand-light-primary"
       >
-        <ServiceIcon :name="feature.id" />
+        <LineIcon :name="feature.id" />
       </span>
       <h3 class="text-[17px] font-bold text-gray-900 dark:text-white">
         {{ feature.title }}
