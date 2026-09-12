@@ -101,15 +101,22 @@
     }
   },
   "hero": {
-    "title": "Automate what your company still does manually",
-    "subtitle": "We build custom solutions to eliminate manual processes, reduce operational costs and accelerate results — with or without artificial intelligence.",
+    "title": "Find out what is worth automating in your operation",
+    "subtitle": "We map your processes together with your team and show you, using data from your own day-to-day, where automation makes sense — before any proposal. With or without artificial intelligence.",
     "cta": "Schedule a free assessment",
     "ctaSecondary": "View our services",
-    "trustedBy": "Companies that have automated with us"
+    "trustedBy": "Companies that have automated with us",
+    "badge": "Free assessment · reply within 24 business hours",
+    "guarantees": [
+      "The code is 100% yours",
+      "Schedule defined after the assessment",
+      "Ongoing support and monitoring"
+    ],
+    "whatsappMessage": "Hi! I'd like to schedule a free assessment of my company's processes."
   },
   "about": {
-    "title": "Why Lecabe?",
-    "content": "We specialize in identifying operational bottlenecks and turning them into automated workflows. Every solution we deliver is custom-built for your company's reality — no generic tools that don't fit your process.",
+    "title": "Transparency from assessment to delivery",
+    "content": "We don't show up with a ready-made answer. Before proposing anything, we learn how your process actually works today, with whom and across which systems — and only then decide what is worth automating.",
     "differentiators": {
       "family": {
         "title": "Hands-on partnership",
@@ -120,9 +127,16 @@
         "description": "No off-the-shelf software. Every automation is designed for your specific workflow."
       },
       "partnership": {
-        "title": "Measurable results",
-        "description": "We're committed to real impact: fewer hours spent, fewer errors, greater speed."
+        "title": "Decisions grounded in your process",
+        "description": "We measure the current process before proposing anything. You compare before and after using numbers from your own business, not market averages."
       }
+    },
+    "eyebrow": "Why Lecabe",
+    "diagnosis": {
+      "title": "The assessment answers",
+      "q1": "Which of your team's tasks are repetitive and follow clear rules?",
+      "q2": "Which systems still exchange data via spreadsheets, email or retyping?",
+      "q3": "What should be automated first — and what is not worth it?"
     }
   },
   "metrics": {
@@ -136,7 +150,7 @@
       },
       "satisfaction": {
         "value": "100%",
-        "label": "Client satisfaction"
+        "label": "Source code handed over to the client"
       },
       "support": {
         "value": "24/7",
@@ -260,7 +274,7 @@
     "steps": {
       "discovery": {
         "title": "Assessment",
-        "description": "We map your current processes, identify bottlenecks and calculate potential savings through automation."
+        "description": "We map your processes together with your team and identify, using real operational data, which steps are worth automating."
       },
       "requirements": {
         "title": "Planning",
@@ -278,7 +292,23 @@
         "title": "Activation & Support",
         "description": "We deploy to production, monitor results and adjust as needed."
       }
-    }
+    },
+    "summary": "5 stages · 6 to 14 weeks in total",
+    "durations": ["1–2 weeks", "1 week", "1–2 weeks", "2–8 weeks", "ongoing"],
+    "guarantees": [
+      {
+        "title": "Full ownership",
+        "description": "Repository, documentation and infrastructure handed over to you."
+      },
+      {
+        "title": "Clear timelines",
+        "description": "Simple automations in 2–4 weeks; complex ones in 2–3 months."
+      },
+      {
+        "title": "Ongoing support",
+        "description": "Monitoring in production; if the process changes, we adjust it."
+      }
+    ]
   },
   "marketplace": {
     "title": "Products",
@@ -459,10 +489,22 @@
         "title": "Results from our automations",
         "subtitle": "Real impact on our clients' operations",
         "items": [
-          { "value": "30+", "label": "Automations delivered" },
-          { "value": "100%", "label": "Source code handed over to the client" },
-          { "value": "24h", "label": "Response time" },
-          { "value": "Free", "label": "Initial assessment" }
+          {
+            "value": "30+",
+            "label": "Automations delivered"
+          },
+          {
+            "value": "100%",
+            "label": "Source code handed over to the client"
+          },
+          {
+            "value": "24h",
+            "label": "Response time"
+          },
+          {
+            "value": "Free",
+            "label": "Initial assessment"
+          }
         ]
       },
       "overview": {
@@ -589,10 +631,22 @@
         "title": "Infrastructure that connects everything",
         "subtitle": "Integrated systems running securely and at scale",
         "items": [
-          { "value": "20+", "label": "Integrations implemented" },
-          { "value": "24/7", "label": "Monitoring" },
-          { "value": "100%", "label": "Source code handed over to the client" },
-          { "value": "24h", "label": "Response time" }
+          {
+            "value": "20+",
+            "label": "Integrations implemented"
+          },
+          {
+            "value": "24/7",
+            "label": "Monitoring"
+          },
+          {
+            "value": "100%",
+            "label": "Source code handed over to the client"
+          },
+          {
+            "value": "24h",
+            "label": "Response time"
+          }
         ]
       },
       "overview": {
@@ -713,10 +767,22 @@
         "title": "Interfaces your team actually adopts",
         "subtitle": "Proven results in usability and tool adoption",
         "items": [
-          { "value": "100%", "label": "Tested with real users" },
-          { "value": "Figma", "label": "Navigable prototypes" },
-          { "value": "WCAG AA", "label": "Accessibility" },
-          { "value": "24h", "label": "Response time" }
+          {
+            "value": "100%",
+            "label": "Tested with real users"
+          },
+          {
+            "value": "Figma",
+            "label": "Navigable prototypes"
+          },
+          {
+            "value": "WCAG AA",
+            "label": "Accessibility"
+          },
+          {
+            "value": "24h",
+            "label": "Response time"
+          }
         ]
       },
       "overview": {
@@ -843,10 +909,22 @@
         "title": "AI that generates real returns",
         "subtitle": "Proven results from AI consulting and implementation",
         "items": [
-          { "value": "10+", "label": "AI implementations delivered" },
-          { "value": "100%", "label": "Source code handed over to the client" },
-          { "value": "24h", "label": "Response time" },
-          { "value": "Free", "label": "Initial consultation" }
+          {
+            "value": "10+",
+            "label": "AI implementations delivered"
+          },
+          {
+            "value": "100%",
+            "label": "Source code handed over to the client"
+          },
+          {
+            "value": "24h",
+            "label": "Response time"
+          },
+          {
+            "value": "Free",
+            "label": "Initial consultation"
+          }
         ]
       },
       "overview": {
@@ -1246,5 +1324,90 @@
   "terms": {
     "title": "Terms of Service",
     "lastUpdated": "Last updated: March 2026"
+  },
+  "console": {
+    "label": "Illustrative example of an automation running",
+    "caption": "Example · Monthly invoicing",
+    "status": "Running",
+    "cycle": "Today's cycle",
+    "cycleOf": "of {total} invoices issued",
+    "lastRun": "Last run",
+    "progress": "Cycle progress",
+    "logTitle": "Activity log",
+    "steps": ["Orders read", "Validated", "Sent to ERP", "Invoices issued"],
+    "kpis": ["runs today", "systems integrated", "manual intervention"],
+    "events": [
+      {
+        "text": "Order #4821 read from the ERP",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Tax ID validated with the revenue service",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Invoice 000312 issued",
+        "tag": "INV",
+        "tone": "info"
+      },
+      {
+        "text": "Email sent to the client",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Finance spreadsheet updated",
+        "tag": "SYNC",
+        "tone": "info"
+      },
+      {
+        "text": "Order #4822 read from the ERP",
+        "tag": "OK",
+        "tone": "ok"
+      },
+      {
+        "text": "Amount mismatch flagged",
+        "tag": "REVIEW",
+        "tone": "warn"
+      },
+      {
+        "text": "Invoice 000313 issued",
+        "tag": "INV",
+        "tone": "info"
+      }
+    ]
+  },
+  "servicesCarousel": {
+    "eyebrow": "What we do",
+    "cardCta": "See details",
+    "prev": "Previous service",
+    "next": "Next service",
+    "bullets": {
+      "software": [
+        "Automatic workflows and approvals",
+        "APIs and system integrations",
+        "Data processing and reporting"
+      ],
+      "cloud": [
+        "ERPs, CRMs and spreadsheets connected",
+        "24/7 monitoring and alerts",
+        "Incremental migration, without stopping operations"
+      ],
+      "ux": ["Operational dashboards", "Testing with real users", "WCAG AA accessibility"],
+      "ai": [
+        "Prioritised by your case, not by hype",
+        "Chatbots and language processing",
+        "Models in production with monitoring"
+      ]
+    }
+  },
+  "contactHome": {
+    "eyebrow": "Contact",
+    "whatsappTitle": "Talk to us on WhatsApp now",
+    "whatsappSubtitle": "+55 (11) 99413-2821 · Mon–Fri, 9am to 6pm",
+    "submit": "Send via WhatsApp",
+    "note": "Your message opens in WhatsApp already filled in. We reply within 24 business hours."
   }
 }

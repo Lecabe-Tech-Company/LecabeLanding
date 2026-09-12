@@ -2,12 +2,11 @@
 import { computed } from 'vue'
 
 /**
- * Line icon set for the service pages, drawn on a 24×24 grid so every glyph
- * shares the same stroke weight and optical size as the inline arrows/chevrons
- * used across the layout.
+ * Line icon set drawn on a 24×24 grid so every glyph shares the stroke weight
+ * and optical size of the inline arrows and chevrons used across the layout.
  *
- * Keys match the feature ids under `servicesPages.<service>.features` in the
- * locale files; unknown keys fall back to the generic `settings` glyph.
+ * Service feature keys match the ids under `servicesPages.<service>.features`
+ * in the locale files; unknown keys fall back to the generic `settings` glyph.
  */
 const ICONS: Record<string, string[]> = {
   // Features — software
@@ -34,15 +33,32 @@ const ICONS: Record<string, string[]> = {
   nlp: ['M14 2.5H6.5A1.5 1.5 0 0 0 5 4v16a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V7.5z', 'M14 2.5V7.5h5', 'M8.5 12.5h7', 'M8.5 16.5h4.5'],
   chatbots: ['M21 15.5A1.5 1.5 0 0 1 19.5 17H8l-4.5 4V4.5A1.5 1.5 0 0 1 5 3h14.5A1.5 1.5 0 0 1 21 4.5z', 'M8.5 10h.01', 'M12.5 10h.01', 'M16.5 10h.01'],
 
+  // Home — process steps, console steps and guarantees
+  inventory: ['M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z', 'M3.5 7.5L12 12l8.5-4.5', 'M12 12v9'],
+  check: ['M5 12.5l4.5 4.5L19 7'],
+  channels: ['M3.5 8h13', 'M13 4.5L16.5 8 13 11.5', 'M20.5 16h-13', 'M11 12.5L7.5 16 11 19.5'],
+  reports: ['M14 2.5H6.5A1.5 1.5 0 0 0 5 4v16a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V7.5z', 'M14 2.5V7.5h5', 'M9 17.5v-3', 'M12 17.5v-6', 'M15 17.5v-4.5'],
+  clock: ['M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z', 'M12 7v5.3l3.4 2'],
+  refresh: ['M20 12a8 8 0 1 1-2.6-5.9', 'M20 3.5V10h-6.5'],
+  user: ['M12 3.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', 'M4.5 21c0-4 3.4-6.2 7.5-6.2S19.5 17 19.5 21'],
+  catalog: ['M4 4.5h6.5A2.5 2.5 0 0 1 13 7v13a2 2 0 0 0-2-2H4z', 'M20 4.5h-6.5A2.5 2.5 0 0 0 11 7v13a2 2 0 0 1 2-2h7z'],
+
   // Shared / fallback
   settings: ['M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z', 'M12 2.5l1.4 2.6 2.9-.5 1 2.8 2.6 1.4-1 2.8 1 2.8-2.6 1.4-1 2.8-2.9-.5L12 21.5l-1.4-2.6-2.9.5-1-2.8-2.6-1.4 1-2.8-1-2.8 2.6-1.4 1-2.8 2.9.5z']
+}
+
+/** Same glyph under the name each call site naturally reaches for. */
+const ALIASES: Record<string, string> = {
+  search: 'research',
+  dashboard: 'prototyping',
+  checkCircle: 'testing'
 }
 
 const props = withDefaults(defineProps<{ name: string; size?: number }>(), {
   size: 20
 })
 
-const paths = computed(() => ICONS[props.name] ?? ICONS.settings)
+const paths = computed(() => ICONS[ALIASES[props.name] ?? props.name] ?? ICONS.settings)
 </script>
 
 <template>

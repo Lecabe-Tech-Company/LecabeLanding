@@ -4,19 +4,19 @@ import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useServices } from '@/composables/useServices'
 import { useServiceSeo } from '@/composables/useServiceSeo'
+import { useWhatsapp } from '@/composables/useWhatsapp'
 import type { FAQ, ProcessStep, ServiceFeature, ServiceId } from '@/types/service'
 import ServiceTabs from '@/components/services/ServiceTabs.vue'
 import ServiceHero from '@/components/services/ServiceHero.vue'
 import ServiceFeatureGrid from '@/components/services/ServiceFeatureGrid.vue'
 import ServiceProcessGrid from '@/components/services/ServiceProcessGrid.vue'
-import ServiceFaq from '@/components/services/ServiceFaq.vue'
+import FaqAccordion from '@/components/ui/FaqAccordion.vue'
 import ServiceContactCard from '@/components/services/ServiceContactCard.vue'
-
-const WHATSAPP_NUMBER = '5511994132821'
 
 const route = useRoute()
 const { t, tm } = useI18n()
 const { getServiceById } = useServices()
+const { whatsappLink } = useWhatsapp()
 
 const serviceId = computed(() => route.meta.serviceId as ServiceId)
 const service = computed(() => getServiceById(serviceId.value))
@@ -72,10 +72,7 @@ const faqItems = computed<FAQ[]>(() =>
   }))
 )
 
-const whatsappUrl = computed(() => {
-  const message = encodeURIComponent(t(`${base.value}.cta.whatsappMessage`))
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
-})
+const whatsappUrl = computed(() => whatsappLink(t(`${base.value}.cta.whatsappMessage`)))
 
 useServiceSeo(
   computed(() => ({
@@ -167,7 +164,7 @@ useServiceSeo(
           >
             {{ t(`${base}.faq.title`) }}
           </h2>
-          <ServiceFaq :items="faqItems" />
+          <FaqAccordion :items="faqItems" />
         </div>
 
         <ServiceContactCard
