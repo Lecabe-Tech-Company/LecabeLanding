@@ -683,8 +683,8 @@
           "answer": "No. We perform incremental migrations with zero downtime. Your old system continues running throughout the transition, with guaranteed rollback in case of any issues."
         },
         "q3": {
-          "question": "How much can I save by migrating to the cloud?",
-          "answer": "On average, our clients reduce infrastructure costs by 30% to 50% through resource optimization, auto-scaling and elimination of idle servers."
+          "question": "How do you assess whether migrating is worth it?",
+          "answer": "We measure what your infrastructure costs today — servers, licences and maintenance hours — and compare it against the cloud scenario, accounting for resource optimization, auto-scaling and shutting down idle machines. The figure comes out of that assessment, not from a market average."
         },
         "q4": {
           "question": "Do you integrate with legacy systems?",
@@ -835,7 +835,7 @@
       },
       "hero": {
         "title": "Artificial intelligence applied to your business",
-        "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence generates real impact and implement solutions that demonstrably reduce costs and increase efficiency.",
+        "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence makes a difference and implement only what holds up in your context.",
         "cta": "Schedule AI consulting",
         "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "AI Automation"]
       },

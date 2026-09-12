@@ -683,8 +683,8 @@
           "answer": "Não. Fazemos migrações incrementais com zero downtime. Seu sistema antigo continua funcionando durante toda a transição, com rollback garantido em caso de qualquer problema."
         },
         "q3": {
-          "question": "Quanto posso economizar migrando para a nuvem?",
-          "answer": "Em média, nossos clientes reduzem entre 30% e 50% dos custos de infraestrutura com otimização de recursos, auto-scaling e eliminação de servidores ociosos."
+          "question": "Como vocês avaliam se a migração compensa?",
+          "answer": "Levantamos o custo da sua infraestrutura hoje — servidores, licenças e horas de manutenção — e comparamos com o cenário na nuvem, considerando otimização de recursos, auto-scaling e desligamento de máquinas ociosas. O número sai desse levantamento, não de uma média de mercado."
         },
         "q4": {
           "question": "Vocês integram com sistemas legados?",
@@ -835,7 +835,7 @@
       },
       "hero": {
         "title": "Inteligência artificial aplicada ao seu negócio",
-        "subtitle": "Não vendemos IA por modismo. Analisamos sua operação, identificamos onde a inteligência artificial gera impacto real e implementamos soluções que comprovadamente reduzem custos e aumentam eficiência.",
+        "subtitle": "Não vendemos IA por modismo. Analisamos sua operação, identificamos onde a inteligência artificial faz diferença e implementamos apenas o que se sustenta no seu contexto.",
         "cta": "Agendar consultoria em IA",
         "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "Automação IA"]
       },
