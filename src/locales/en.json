@@ -453,7 +453,7 @@
         "title": "Eliminate manual processes with custom automation",
         "subtitle": "We transform repetitive workflows into automated systems that save time, reduce errors and free your team to focus on what truly matters.",
         "cta": "Schedule a free assessment",
-        "visualMetrics": ["Custom-built", "Integrations", "Zero errors", "Fast ROI"]
+        "visualMetrics": ["Custom-built", "Integrations", "Workflows", "Dashboards"]
       },
       "metrics": {
         "title": "Results from our automations",
@@ -461,8 +461,8 @@
         "items": [
           { "value": "30+", "label": "Automations delivered" },
           { "value": "100%", "label": "Source code handed over to the client" },
-          { "value": "99.5%", "label": "Automation uptime" },
-          { "value": "24h", "label": "Response time" }
+          { "value": "24h", "label": "Response time" },
+          { "value": "Free", "label": "Initial assessment" }
         ]
       },
       "overview": {
@@ -590,9 +590,9 @@
         "subtitle": "Integrated systems running securely and at scale",
         "items": [
           { "value": "20+", "label": "Integrations implemented" },
-          { "value": "0", "label": "Downtime during migrations" },
           { "value": "24/7", "label": "Monitoring" },
-          { "value": "99.5%", "label": "Availability" }
+          { "value": "100%", "label": "Source code handed over to the client" },
+          { "value": "24h", "label": "Response time" }
         ]
       },
       "overview": {
@@ -715,8 +715,8 @@
         "items": [
           { "value": "100%", "label": "Tested with real users" },
           { "value": "Figma", "label": "Navigable prototypes" },
-          { "value": "20h+", "label": "Testing per project" },
-          { "value": "WCAG AA", "label": "Accessibility" }
+          { "value": "WCAG AA", "label": "Accessibility" },
+          { "value": "24h", "label": "Response time" }
         ]
       },
       "overview": {
@@ -843,10 +843,10 @@
         "title": "AI that generates real returns",
         "subtitle": "Proven results from AI consulting and implementation",
         "items": [
-          { "value": "ROI", "label": "Prioritised by the return estimated for your case" },
           { "value": "10+", "label": "AI implementations delivered" },
-          { "value": "95%+", "label": "Model accuracy" },
-          { "value": "Prod.", "label": "Models monitored in production" }
+          { "value": "100%", "label": "Source code handed over to the client" },
+          { "value": "24h", "label": "Response time" },
+          { "value": "Free", "label": "Initial consultation" }
         ]
       },
       "overview": {

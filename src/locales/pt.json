@@ -453,7 +453,7 @@
         "title": "Elimine processos manuais com automação sob medida",
         "subtitle": "Transformamos fluxos repetitivos em sistemas automatizados que economizam tempo, reduzem erros e liberam sua equipe para o que realmente importa.",
         "cta": "Agendar diagnóstico gratuito",
-        "visualMetrics": ["Sob medida", "Integrações", "Zero erros", "ROI rápido"]
+        "visualMetrics": ["Sob medida", "Integrações", "Workflows", "Dashboards"]
       },
       "metrics": {
         "title": "Resultados das nossas automações",
@@ -461,8 +461,8 @@
         "items": [
           { "value": "30+", "label": "Automações entregues" },
           { "value": "100%", "label": "Código entregue ao cliente" },
-          { "value": "99.5%", "label": "Uptime das automações" },
-          { "value": "24h", "label": "Prazo de resposta" }
+          { "value": "24h", "label": "Prazo de resposta" },
+          { "value": "Grátis", "label": "Diagnóstico inicial" }
         ]
       },
       "overview": {
@@ -590,9 +590,9 @@
         "subtitle": "Sistemas integrados rodando com segurança e escala",
         "items": [
           { "value": "20+", "label": "Integrações implementadas" },
-          { "value": "0", "label": "Downtime em migrações" },
           { "value": "24/7", "label": "Monitoramento" },
-          { "value": "99.5%", "label": "Disponibilidade" }
+          { "value": "100%", "label": "Código entregue ao cliente" },
+          { "value": "24h", "label": "Prazo de resposta" }
         ]
       },
       "overview": {
@@ -715,8 +715,8 @@
         "items": [
           { "value": "100%", "label": "Testado com usuários reais" },
           { "value": "Figma", "label": "Protótipos navegáveis" },
-          { "value": "20h+", "label": "Testes por projeto" },
-          { "value": "WCAG AA", "label": "Acessibilidade" }
+          { "value": "WCAG AA", "label": "Acessibilidade" },
+          { "value": "24h", "label": "Prazo de resposta" }
         ]
       },
       "overview": {
@@ -843,10 +843,10 @@
         "title": "IA que gera retorno real",
         "subtitle": "Resultados comprovados de consultoria e implementação de IA",
         "items": [
-          { "value": "ROI", "label": "Priorização por retorno estimado no seu caso" },
           { "value": "10+", "label": "Implementações de IA realizadas" },
-          { "value": "95%+", "label": "Acurácia dos modelos" },
-          { "value": "Prod.", "label": "Modelos monitorados em produção" }
+          { "value": "100%", "label": "Código entregue ao cliente" },
+          { "value": "24h", "label": "Prazo de resposta" },
+          { "value": "Grátis", "label": "Consultoria inicial" }
         ]
       },
       "overview": {
