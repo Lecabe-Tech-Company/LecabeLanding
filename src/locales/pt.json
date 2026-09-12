@@ -680,7 +680,7 @@
         },
         "q2": {
           "question": "A migração vai parar minha operação?",
-          "answer": "Não. Fazemos migrações incrementais com zero downtime. Seu sistema antigo continua funcionando durante toda a transição, com rollback garantido em caso de qualquer problema."
+          "answer": "Não. Fazemos migrações incrementais: seu sistema antigo continua funcionando durante toda a transição, com rollback garantido em caso de qualquer problema."
         },
         "q3": {
           "question": "Como vocês avaliam se a migração compensa?",
