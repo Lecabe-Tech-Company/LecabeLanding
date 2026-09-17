@@ -43,16 +43,49 @@ const storyParagraphs = computed(() =>
   )
 )
 
+type CompanyId = 'nttdata' | 'ze' | 'bees' | 'gag'
+
+const COMPANY_IDS: CompanyId[] = ['nttdata', 'ze', 'bees', 'gag']
+
+/**
+ * Logo files for the highlighted companies, served from `public/`.
+ * Drop each company's logo (SVG, or PNG with a transparent background) at the
+ * path below and the card swaps the lettermark for the real logo. Paths left
+ * empty on purpose: a missing file would 404 on every page load.
+ */
+const COMPANY_LOGOS: Record<CompanyId, string> = {
+  nttdata: '', // '/assets/logos/companies/ntt-data.svg'
+  ze: '', // '/assets/logos/companies/ze-delivery.svg'
+  bees: '', // '/assets/logos/companies/bees.svg'
+  gag: '' // '/assets/logos/companies/gag.svg'
+}
+
+/** Shown until a logo file exists, so the cards never look unfinished. */
+const COMPANY_LETTERMARKS: Record<CompanyId, string> = {
+  nttdata: 'NTT',
+  ze: 'ZÉ',
+  bees: 'BEES',
+  gag: 'GAG'
+}
+
 /**
  * The four companies the page is built around. `context` carries the group or
- * the role — never a job title we cannot back up — so the cards stay factual.
+ * the segment and `role` the job title — both empty rather than guessed when
+ * we cannot back them up, so the cards stay factual.
  */
 const companies = computed(() =>
-  (['nttdata', 'ze', 'bees', 'gag'] as const).map((id) => ({
+  COMPANY_IDS.map((id) => ({
     id,
+    logo: COMPANY_LOGOS[id],
+    lettermark: COMPANY_LETTERMARKS[id],
     company: t(`companyPages.founder.companies.items.${id}.company`),
+    role: t(`companyPages.founder.companies.items.${id}.role`),
     context: t(`companyPages.founder.companies.items.${id}.context`),
-    description: t(`companyPages.founder.companies.items.${id}.description`)
+    description: t(`companyPages.founder.companies.items.${id}.description`),
+    projects: t(`companyPages.founder.companies.items.${id}.projects`)
+      .split('·')
+      .map((project) => project.trim())
+      .filter(Boolean)
   }))
 )
 
@@ -298,20 +331,34 @@ useFounderSeo(
             :key="company.id"
             class="bg-white dark:bg-[#1e202d]/90 rounded-2xl p-8 border border-gray-100 dark:border-brand-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all"
           >
-            <div class="flex items-start justify-between gap-4 mb-4">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
-                {{ company.company }}
-              </h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                class="text-brand-primary/40 dark:text-brand-light-primary/40 flex-shrink-0"
-              >
-                <path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.28L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,85.34l80-53.33V208H48ZM208,208H144V96h64Z" />
-              </svg>
+            <div class="flex items-start gap-4 mb-4">
+              <!-- Logo, or the lettermark until a logo file is dropped in -->
+              <div class="w-14 h-14 flex-shrink-0 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex items-center justify-center overflow-hidden">
+                <img
+                  v-if="company.logo"
+                  :src="company.logo"
+                  :alt="company.company"
+                  class="w-full h-full object-contain p-2"
+                  loading="lazy"
+                >
+                <span
+                  v-else
+                  class="text-sm font-bold text-brand-primary dark:text-brand-light-primary tracking-tight"
+                >
+                  {{ company.lettermark }}
+                </span>
+              </div>
+              <div class="min-w-0">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight">
+                  {{ company.company }}
+                </h3>
+                <p
+                  v-if="company.role"
+                  class="text-brand-primary dark:text-brand-light-primary font-semibold mt-1"
+                >
+                  {{ company.role }}
+                </p>
+              </div>
             </div>
             <span class="inline-block px-3 py-1 rounded-lg bg-purple-500/10 text-purple-500 text-xs font-semibold mb-4">
               {{ company.context }}
@@ -319,6 +366,23 @@ useFounderSeo(
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
               {{ company.description }}
             </p>
+            <div
+              v-if="company.projects.length"
+              class="mt-5 pt-5 border-t border-gray-100 dark:border-white/10"
+            >
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+                {{ t('companyPages.founder.companies.projectsLabel') }}
+              </p>
+              <ul class="flex flex-wrap gap-2">
+                <li
+                  v-for="project in company.projects"
+                  :key="project"
+                  class="px-3 py-1.5 rounded-lg bg-brand-alternative/10 text-sm font-medium text-gray-700 dark:text-gray-200"
+                >
+                  {{ project }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

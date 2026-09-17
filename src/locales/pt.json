@@ -1204,7 +1204,7 @@
       "story": {
         "title": "Uma empresa começa com uma pessoa",
         "paragraphs": {
-          "first": "Sou engenheiro de software e fundei a Lecabe em 2024, depois de anos trabalhando dentro de operações reais: consultoria de tecnologia em ambiente enterprise na NTT DATA Brasil, produtos digitais de altíssimo volume no Zé Delivery e no BEES, ambos do grupo AB InBev, e uma recicladora de eletrônicos onde construí o sistema que roda a empresa inteira.",
+          "first": "Sou engenheiro de software e fundei a Lecabe em 2024, depois de anos trabalhando dentro de operações reais: consultoria de tecnologia em ambiente enterprise na NTT DATA Brasil, automações no Zé Delivery e documentação técnica no BEES, ambos do grupo AB InBev, e uma recicladora de eletrônicos onde construí o sistema que roda a empresa inteira.",
           "second": "Em todas elas aprendi a mesma lição: o gargalo raramente é a tecnologia. É o processo que ninguém parou para desenhar, o dado que chega tarde, a planilha que virou sistema crítico sem ninguém decidir isso. Por isso a primeira etapa de qualquer projeto meu é entender o problema de negócio — só depois vem o código.",
           "third": "Minha formação é em Engenharia da Computação pela Anhanguera e estou concluindo a pós-graduação em Gestão Estratégica e Liderança na FIAP. Hoje trabalho com LLMs, arquiteturas RAG, protocolo MCP e orquestração multiagente, além de automação de fluxos corporativos — sempre com o mesmo objetivo: eliminar gargalos e devolver tempo para quem toma decisão."
         }
@@ -1212,25 +1212,34 @@
       "companies": {
         "title": "Onde eu passei",
         "subtitle": "Operações muito diferentes entre si. É essa variação — da escala enterprise ao chão de fábrica — que hoje vira repertório nos projetos da Lecabe.",
+        "projectsLabel": "Automações que implementei",
         "items": {
           "nttdata": {
             "company": "NTT DATA Brasil",
+            "role": "",
+            "projects": "",
             "context": "Consultoria global de tecnologia",
             "description": "Ambiente enterprise de verdade: projetos grandes, múltiplos times em paralelo e os padrões de qualidade, segurança e governança exigidos por uma das maiores consultorias de tecnologia do mundo."
           },
           "ze": {
             "company": "Zé Delivery",
+            "role": "Desenvolvedor de Automações",
+            "projects": "Hiring Request · ZBB Automation",
             "context": "Grupo AB InBev",
-            "description": "O app de delivery de bebidas da AB InBev: produto digital de altíssimo volume, com operação distribuída em milhares de pontos de venda pelo Brasil. Escala em que cada detalhe de performance e integração aparece."
+            "description": "Construí automações dentro do app de delivery de bebidas da AB InBev: um produto de altíssimo volume, com operação distribuída em milhares de pontos de venda pelo Brasil. Nessa escala, cada processo manual que sobra custa caro — e é exatamente o tipo de gargalo que eu passei a caçar."
           },
           "bees": {
             "company": "BEES",
+            "role": "Tech Writer",
+            "projects": "",
             "context": "Grupo AB InBev",
-            "description": "A plataforma B2B por onde o varejo compra da AB InBev: catálogo, pedidos e relacionamento em escala continental, com integrações entre sistemas que não podem parar."
+            "description": "Documentação técnica da plataforma B2B por onde o varejo compra da AB InBev. Escrever a documentação de um sistema dessa escala obriga a entendê-lo por inteiro — e me ensinou que automação sem documentação morre na primeira troca de time."
           },
           "gag": {
             "company": "GAG Reciclagem de Eletrônicos",
-            "context": "Desenvolvedor líder",
+            "role": "Desenvolvedor líder",
+            "projects": "",
+            "context": "Reciclagem de eletrônicos",
             "description": "Onde construí um ERP completo do zero: estoque, pedidos, compras, fiscal, RH, logística e rastreamento de produtos, com painel administrativo central e integrações com ERPs de terceiros via API."
           }
         }
