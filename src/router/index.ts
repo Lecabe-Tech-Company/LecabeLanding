@@ -95,6 +95,11 @@ const router = createRouter({
       component: () => import('../views/company/CompanyTeamView.vue')
     },
     {
+      path: '/empresa/fundador',
+      name: 'company-founder',
+      component: () => import('../views/company/CompanyFounderView.vue')
+    },
+    {
       path: '/empresa/cultura',
       name: 'company-culture',
       component: () => import('../views/company/CompanyCultureView.vue')
