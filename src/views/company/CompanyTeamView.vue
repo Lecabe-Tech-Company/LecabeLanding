@@ -72,24 +72,42 @@ const navigateTo = (path: string) => {
             </div>
           </div>
 
-          <div class="bg-white/90 dark:bg-[#1e202d]/90 backdrop-blur-sm rounded-2xl p-12 border border-gray-100 dark:border-brand-primary/20 text-center">
-            <div class="max-w-2xl mx-auto">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                class="mx-auto mb-6 text-gray-400"
-              >
-                <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z" />
-              </svg>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                {{ t('companyPages.team.comingSoon.title') }}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-400">
-                {{ t('companyPages.team.comingSoon.description') }}
-              </p>
+          <!-- Founder card: the detail lives on /empresa/fundador -->
+          <div class="bg-white/90 dark:bg-[#1e202d]/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-100 dark:border-brand-primary/20">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div class="w-28 h-28 md:w-32 md:h-32 flex-shrink-0 rounded-full p-[3px] bg-gradient-to-br from-brand-primary via-purple-500 to-brand-alternative">
+                <div class="w-full h-full rounded-full bg-white dark:bg-[#1e202d] flex items-center justify-center">
+                  <span class="text-3xl md:text-4xl font-bold bg-gradient-to-br from-brand-primary to-purple-500 bg-clip-text text-transparent">
+                    PG
+                  </span>
+                </div>
+              </div>
+              <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                  {{ t('companyPages.team.founder.name') }}
+                </h3>
+                <p class="text-brand-primary dark:text-brand-light-primary font-semibold mb-4">
+                  {{ t('companyPages.team.founder.role') }}
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                  {{ t('companyPages.team.founder.description') }}
+                </p>
+                <button
+                  class="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 dark:bg-purple-400 text-white dark:text-brand-dark rounded-xl font-bold hover:bg-purple-600 dark:hover:bg-purple-500 hover:scale-[1.02] transition-all"
+                  @click="navigateTo('/empresa/fundador')"
+                >
+                  {{ t('companyPages.team.founder.button') }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
