@@ -89,6 +89,10 @@
           "title": "Nosso Time",
           "description": "Conheça quem faz acontecer"
         },
+        "founder": {
+          "title": "O Fundador",
+          "description": "Quem está por trás da Lecabe"
+        },
         "culture": {
           "title": "Cultura",
           "description": "Ambiente e benefícios"
@@ -1156,6 +1160,200 @@
         "title": "Quer fazer parte?",
         "description": "Estamos sempre procurando pessoas que compartilham nossa paixão por resolver problemas com tecnologia.",
         "button": "Ver vagas abertas"
+      },
+      "founder": {
+        "name": "Patrick Bonaretti Grilanda",
+        "role": "Fundador e Engenheiro de Software",
+        "description": "Engenheiro de software com passagens por NTT DATA Brasil, Zé Delivery e BEES (AB InBev) e GAG Reciclagem de Eletrônicos. Fundou a Lecabe em 2024 para levar esse repertório a empresas sem time de engenharia interno.",
+        "button": "Conhecer o fundador"
+      }
+    },
+    "founder": {
+      "meta": {
+        "title": "O fundador da Lecabe — Patrick Bonaretti Grilanda",
+        "description": "Conheça Patrick Bonaretti Grilanda, fundador e engenheiro de software da Lecabe, com passagens por NTT DATA Brasil, Zé Delivery (AB InBev), BEES (AB InBev) e GAG Reciclagem de Eletrônicos."
+      },
+      "hero": {
+        "eyebrow": "Quem está por trás da Lecabe",
+        "name": "Patrick Bonaretti Grilanda",
+        "role": "Fundador e Engenheiro de Software",
+        "subtitle": "Engenharia de software, inteligência artificial e automação de processos. Passei por operações de todos os tamanhos — de uma recicladora de eletrônicos a plataformas digitais da AB InBev — e é esse repertório que hoje entra em cada projeto da Lecabe.",
+        "location": "Brasil · atuação remota",
+        "linkedin": "Ver perfil no LinkedIn",
+        "contact": "Falar com o Patrick",
+        "photoAlt": "Patrick Bonaretti Grilanda, fundador da Lecabe"
+      },
+      "stats": {
+        "experience": {
+          "value": "6+",
+          "label": "anos construindo software"
+        },
+        "founded": {
+          "value": "2024",
+          "label": "ano em que a Lecabe nasceu"
+        },
+        "companies": {
+          "value": "4",
+          "label": "operações que me formaram"
+        },
+        "erp": {
+          "value": "1 ERP",
+          "label": "completo, do zero ao suporte"
+        }
+      },
+      "story": {
+        "title": "Uma empresa começa com uma pessoa",
+        "paragraphs": {
+          "first": "Sou engenheiro de software e fundei a Lecabe em 2024, depois de anos trabalhando dentro de operações reais: consultoria de tecnologia em ambiente enterprise na NTT DATA Brasil, automações no Zé Delivery e documentação técnica no BEES, ambos do grupo AB InBev, e uma recicladora de eletrônicos onde construí o sistema que roda a empresa inteira.",
+          "second": "Em todas elas aprendi a mesma lição: o gargalo raramente é a tecnologia. É o processo que ninguém parou para desenhar, o dado que chega tarde, a planilha que virou sistema crítico sem ninguém decidir isso. Por isso a primeira etapa de qualquer projeto meu é entender o problema de negócio — só depois vem o código.",
+          "third": "Minha formação é em Engenharia da Computação pela Anhanguera e estou concluindo a pós-graduação em Gestão Estratégica e Liderança na FIAP. Hoje trabalho com LLMs, arquiteturas RAG, protocolo MCP e orquestração multiagente, além de automação de fluxos corporativos — sempre com o mesmo objetivo: eliminar gargalos e devolver tempo para quem toma decisão."
+        }
+      },
+      "companies": {
+        "title": "Onde eu passei",
+        "subtitle": "Operações muito diferentes entre si. É essa variação — da escala enterprise ao chão de fábrica — que hoje vira repertório nos projetos da Lecabe.",
+        "projectsLabel": "Automações que implementei",
+        "items": {
+          "nttdata": {
+            "company": "NTT DATA Brasil",
+            "role": "",
+            "projects": "",
+            "context": "Consultoria global de tecnologia",
+            "description": "Ambiente enterprise de verdade: projetos grandes, múltiplos times em paralelo e os padrões de qualidade, segurança e governança exigidos por uma das maiores consultorias de tecnologia do mundo."
+          },
+          "ze": {
+            "company": "Zé Delivery",
+            "role": "Desenvolvedor de Automações",
+            "projects": "Hiring Request · ZBB Automation",
+            "context": "Grupo AB InBev",
+            "description": "Construí automações dentro do app de delivery de bebidas da AB InBev: um produto de altíssimo volume, com operação distribuída em milhares de pontos de venda pelo Brasil. Nessa escala, cada processo manual que sobra custa caro — e é exatamente o tipo de gargalo que eu passei a caçar."
+          },
+          "bees": {
+            "company": "BEES",
+            "role": "Tech Writer",
+            "projects": "",
+            "context": "Grupo AB InBev",
+            "description": "Documentação técnica da plataforma B2B por onde o varejo compra da AB InBev. Escrever a documentação de um sistema dessa escala obriga a entendê-lo por inteiro — e me ensinou que automação sem documentação morre na primeira troca de time."
+          },
+          "gag": {
+            "company": "GAG Reciclagem de Eletrônicos",
+            "role": "Desenvolvedor líder",
+            "projects": "",
+            "context": "Reciclagem de eletrônicos",
+            "description": "Onde construí um ERP completo do zero: estoque, pedidos, compras, fiscal, RH, logística e rastreamento de produtos, com painel administrativo central e integrações com ERPs de terceiros via API."
+          }
+        }
+      },
+      "timeline": {
+        "title": "Trajetória",
+        "subtitle": "Da bancada técnica à arquitetura de soluções com IA.",
+        "current": "atual",
+        "items": {
+          "lecabe": {
+            "period": "fev 2024 — hoje",
+            "role": "Fundador e Engenheiro de Software",
+            "company": "Lecabe",
+            "description": "Analiso processos de negócio complexos e arquiteto soluções sob medida que automatizam, integram e otimizam operações. Na prática: agentes de IA com LLMs, arquiteturas RAG e protocolo MCP conversando com dados reais da empresa, orquestração multiagente com CrewAI e automação de fluxos corporativos com Power Automate."
+          },
+          "proz": {
+            "period": "set 2023 — fev 2024",
+            "role": "Instrutor de Análise e Desenvolvimento de Sistemas",
+            "company": "Proz",
+            "description": "Ministrei cursos introdutórios de programação: lógica, estruturas condicionais e de controle, fundamentos. Ensinar obriga a traduzir o técnico para português claro — o que uso em toda reunião com cliente até hoje."
+          },
+          "gagAnalyst": {
+            "period": "jan 2023 — fev 2024",
+            "role": "Analista de Desenvolvimento de Sistemas",
+            "company": "GAG Reciclagem de Eletrônicos",
+            "description": "Em parceria com a equipe de processos, padronizei e otimizei fluxos operacionais. Desenvolvi o ERP integrado da empresa — estoque, pedidos, cadastro de produtos, RH, compras, fiscal, vendas e logística — e as integrações com ERPs de terceiros via API, garantindo sincronização de dados."
+          },
+          "gagFullstack": {
+            "period": "mai 2022 — jan 2023",
+            "role": "Desenvolvedor Full Stack",
+            "company": "GAG Reciclagem de Eletrônicos",
+            "description": "Sistema completo de gestão de produtos: controle de estoque, pedidos, cadastro e painel administrativo, mais os módulos de recursos humanos. Backend e frontend, com foco em enxugar processo operacional."
+          },
+          "gagTech": {
+            "period": "dez 2021 — mai 2022",
+            "role": "Técnico de Informática",
+            "company": "GAG Reciclagem de Eletrônicos",
+            "description": "Testes de funcionalidade e diagnóstico em equipamentos eletrônicos, identificando falhas para viabilizar reaproveitamento e reciclagem. Foi aqui que entendi a operação que depois viraria software."
+          },
+          "tel": {
+            "period": "mar 2020 — dez 2021",
+            "role": "Técnico de Telecomunicações",
+            "company": "Tel Telecomunicações",
+            "description": "Instalações de internet via fibra óptica, configuração de roteadores, switches, repetidores e servidores, além de reparo de cabos. Infraestrutura na mão, não no diagrama."
+          }
+        }
+      },
+      "skills": {
+        "title": "O que eu levo para cada projeto",
+        "subtitle": "Ferramenta é meio. A escolha depende do problema — mas este é o repertório com que trabalho.",
+        "groups": {
+          "ai": {
+            "title": "IA e automação",
+            "items": "LLMs · Arquiteturas RAG · Protocolo MCP · CrewAI · LangChain · LangGraph · Power Automate"
+          },
+          "backend": {
+            "title": "Backend",
+            "items": "PHP orientado a objetos · SOLID · Laravel · Livewire · Eloquent ORM · APIs REST · Swagger e Scribe · PHPUnit e Pest"
+          },
+          "frontend": {
+            "title": "Frontend",
+            "items": "Vue · Tailwind CSS · Alpine.js · Livewire · Twig · Filament PHP"
+          },
+          "process": {
+            "title": "Produto e processo",
+            "items": "Mapeamento de processos · Documentação de requisitos e PRD · Design Thinking · LGPD · Docusaurus"
+          }
+        }
+      },
+      "beliefs": {
+        "title": "Como eu trabalho",
+        "items": {
+          "problem": {
+            "title": "O problema vem antes do código",
+            "description": "Nenhuma linha é escrita antes de eu entender o processo, quem executa e onde o tempo está sendo perdido. Automatizar um processo ruim só acelera o erro."
+          },
+          "measurable": {
+            "title": "Impacto tem que ser medível",
+            "description": "Horas devolvidas, erros evitados, decisão que antes levava uma semana e passa a levar um dia. Se não dá para medir, não foi entregue."
+          },
+          "direct": {
+            "title": "Quem constrói também atende",
+            "description": "Você conversa com o engenheiro que vai desenhar a solução, não com um intermediário. Menos ruído entre o problema e quem pode resolvê-lo."
+          }
+        }
+      },
+      "education": {
+        "title": "Formação",
+        "items": {
+          "fiap": {
+            "degree": "Pós-graduação em Gestão Estratégica e Liderança",
+            "school": "FIAP",
+            "period": "2025 — 2026"
+          },
+          "anhanguera": {
+            "degree": "Engenharia da Computação",
+            "school": "Anhanguera Educacional",
+            "period": "2020 — 2024"
+          }
+        },
+        "certificationsTitle": "Certificações",
+        "certifications": {
+          "designThinking": "Sprint de Design Thinking",
+          "storytelling": "Sprint de Storytelling para Negócios",
+          "lgpd": "Sprint LGPD: Lei Geral de Proteção de Dados",
+          "prd": "PRD: técnicas para documentação de requisitos"
+        }
+      },
+      "cta": {
+        "title": "Quer falar direto com quem vai construir?",
+        "description": "Sem intermediário e sem proposta genérica: me conte o processo que está travando a sua operação e eu te digo, com honestidade, se automação resolve.",
+        "whatsapp": "Falar no WhatsApp",
+        "linkedin": "Conectar no LinkedIn",
+        "whatsappMessage": "Olá Patrick! Vi sua página na Lecabe e gostaria de conversar sobre um processo da minha empresa."
       }
     },
     "culture": {

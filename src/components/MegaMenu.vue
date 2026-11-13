@@ -76,6 +76,7 @@ const company = computed(() => [
   { title: t('megamenu.company.items.overview.title'), description: t('megamenu.company.items.overview.description'), icon: 'info', href: '/empresa' },
   { title: t('megamenu.company.items.about.title'), description: t('megamenu.company.items.about.description'), icon: 'history', href: '/empresa/sobre' },
   { title: t('megamenu.company.items.team.title'), description: t('megamenu.company.items.team.description'), icon: 'team', href: '/empresa/equipe' },
+  { title: t('megamenu.company.items.founder.title'), description: t('megamenu.company.items.founder.description'), icon: 'founder', href: '/empresa/fundador' },
   { title: t('megamenu.company.items.culture.title'), description: t('megamenu.company.items.culture.description'), icon: 'culture', href: '/empresa/cultura' },
   { title: t('megamenu.company.items.careers.title'), description: t('megamenu.company.items.careers.description'), icon: 'careers', href: '/empresa/carreiras' }
 ])
@@ -458,6 +459,17 @@ const navigateTo = (href: string) => {
                     class="text-purple-500"
                   >
                     <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z" />
+                  </svg>
+                  <svg
+                    v-else-if="item.icon === 'founder'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z" />
                   </svg>
                   <svg
                     v-else-if="item.icon === 'culture'"
