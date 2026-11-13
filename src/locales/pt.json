@@ -184,7 +184,10 @@
           "detail": "Enviar o relatório ao gerente.",
           "thought": "Relatório pronto. Vou enviá-lo ao gerente no Slack."
         }
-      ]
+      ],
+      "pause": "Pausar",
+      "resume": "Continuar",
+      "replay": "Reiniciar"
     }
   },
   "about": {
