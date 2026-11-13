@@ -16,4 +16,3 @@ app.use(i18n)
 app.directive('reveal', vReveal)
 
 app.mount('#app')
-
