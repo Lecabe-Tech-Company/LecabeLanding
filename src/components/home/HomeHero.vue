@@ -11,11 +11,8 @@ const { t } = useI18n()
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(950px_460px_at_50%_-10%,rgba(79,82,255,.075),transparent_70%)] dark:bg-[radial-gradient(950px_460px_at_50%_-10%,rgba(79,82,255,.17),transparent_70%)]" aria-hidden="true" />
     <div class="relative mx-auto max-w-7xl px-5 pb-16 pt-16 sm:px-8 md:pt-20 lg:px-12">
       <div class="mx-auto flex max-w-6xl flex-col items-center text-center">
-        <p class="inline-flex items-center gap-2 rounded-full border border-brand-primary/20 bg-brand-primary/[.055] px-4 py-1.5 text-[12px] font-semibold text-brand-dark-primary dark:border-brand-light-primary/25 dark:bg-brand-light-primary/10 dark:text-brand-light-primary">
-          <span class="h-1.5 w-1.5 rounded-full bg-brand-alternative" aria-hidden="true" /> {{ t('hero.badge') }}
-        </p>
         <!-- H1 must be visible immediately to avoid delaying LCP -->
-        <h1 id="home-hero-title" class="mt-6 max-w-[1160px] text-[clamp(2.35rem,4.5vw,4.35rem)] font-extrabold leading-[1.035] tracking-[-.045em] text-gray-900 dark:text-white">
+        <h1 id="home-hero-title" class="mt-1 max-w-[1160px] text-[clamp(2.35rem,4.5vw,4.35rem)] font-extrabold leading-[1.035] tracking-[-.045em] text-gray-900 dark:text-white">
           {{ t('hero.title') }}
         </h1>
         <p class="mt-6 max-w-[850px] text-[16px] leading-[1.8] text-gray-600 dark:text-gray-300 sm:text-[18px]">
