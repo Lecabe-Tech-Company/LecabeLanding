@@ -105,12 +105,12 @@
     }
   },
   "hero": {
-    "title": "Turn disconnected systems into one connected operation",
-    "subtitle": "Custom systems integration and automation to connect teams, data and processes. Excel, SharePoint, Slack, Notion and your ERP can work together — without replacing what already works.",
+    "title": "Systems integration, automation and AI for a connected operation",
+    "subtitle": "We connect Excel, SharePoint, Slack, Notion and internal systems to automate processes, reduce manual work and turn requests into intelligent workflows.",
     "cta": "Schedule a free assessment",
     "ctaSecondary": "View our services",
     "trustedBy": "Companies that have automated with us",
-    "badge": "Custom software engineering and automation",
+    "badge": "Systems integration, automation and AI",
     "guarantees": [
       "Build on what already works",
       "Integrations designed around your workflow",
@@ -125,7 +125,67 @@
     "diagramStep1": "Data",
     "diagramStep2": "Rules",
     "diagramStep3": "Actions",
-    "diagramCaption": "Illustrative systems integration concept. No real data or active connections are shown."
+    "diagramCaption": "Illustrative systems integration concept. No real data or active connections are shown.",
+    "workflow": {
+      "requestLabel": "REQUEST",
+      "request": "Retrieve the context of the report requested in the last meeting and notify the manager through Slack.",
+      "thinking": "AGENT THINKING • SIMULATION",
+      "heading": "One request. Multiple systems. One workflow.",
+      "description": "Illustrative example: no real accounts or files are accessed.",
+      "agent": "Lecabe Agent",
+      "agentSub": "Tool orchestration",
+      "live": "Interactive demo",
+      "report": "Consolidated report",
+      "statuses": {
+        "done": "Completed",
+        "active": "Running",
+        "todo": "Waiting"
+      },
+      "steps": [
+        {
+          "icon": "stars",
+          "title": "Interpret the request",
+          "detail": "Understand the report and recipient.",
+          "thought": "I need the meeting context and the relevant files."
+        },
+        {
+          "icon": "api",
+          "title": "Create Report From Meeting",
+          "detail": "Call the report creation skill.",
+          "thought": "I will run the Create Report From Meeting skill."
+        },
+        {
+          "icon": "notion",
+          "title": "READ Notion Page",
+          "detail": "Read the meeting transcript.",
+          "thought": "I will read the Notion transcript to understand the request."
+        },
+        {
+          "icon": "sharepoint",
+          "title": "Find the SharePoint folder",
+          "detail": "Locate the files using the meeting context.",
+          "thought": "I have the context. Finding the folder with the Excel files."
+        },
+        {
+          "icon": "excel",
+          "title": "Read three Excel sheets",
+          "detail": "List and iterate through the files.",
+          "thought": "Found three spreadsheets. I will read each and consolidate the data."
+        },
+        {
+          "icon": "report",
+          "title": "Consolidate the report",
+          "detail": "Generate one consolidated document.",
+          "thought": "I will organize the findings into a consolidated report."
+        },
+        {
+          "icon": "slack",
+          "title": "Notify through Slack",
+          "detail": "Send the report to the manager.",
+          "thought": "Report ready. Sending it to the manager on Slack."
+        }
+      ]
+    }
   },
   "about": {
     "title": "Transparency from assessment to delivery",
