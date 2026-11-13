@@ -147,8 +147,18 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="workflow-agent text-center">
-        <div class="workflow-agent-icon mx-auto flex h-16 w-16 items-center justify-center rounded-[20px] bg-brand-primary text-white shadow-[0_9px_26px_rgba(79,82,255,.22)]">
-          <WorkflowBrandIcon name="stars" :size="34" />
+        <div class="workflow-agent-icon relative mx-auto flex h-[92px] w-[92px] items-center justify-center rounded-[26px] border border-brand-primary/15 bg-white shadow-[0_10px_30px_rgba(79,82,255,.14)] dark:bg-[#252A42]">
+          <img
+            src="/brand-icons/agent-robot.svg"
+            width="76"
+            height="76"
+            alt=""
+            class="h-[76px] w-[76px] object-contain"
+            decoding="async"
+          />
+          <span class="absolute -right-2 -top-2 grid h-7 w-7 place-items-center rounded-full border border-brand-primary/10 bg-white text-brand-primary shadow-sm dark:bg-[#252A42]" aria-hidden="true">
+            <WorkflowBrandIcon name="stars" :size="15" />
+          </span>
         </div>
         <p class="mt-3 text-[15px] font-extrabold tracking-tight text-gray-900 dark:text-white">{{ t('hero.workflow.agent') }}</p>
         <p class="mt-1 max-w-[180px] text-[11px] font-medium leading-tight text-gray-500 dark:text-gray-400">{{ activeLabel }}</p>
