@@ -12,6 +12,7 @@ const root = ref<HTMLElement | null>(null)
 const stepDelay = 2800
 let timer: ReturnType<typeof setInterval> | undefined
 let observer: IntersectionObserver | undefined
+let inView = true
 
 const steps = computed(() => {
   const raw = (tm('hero.workflow.steps') as unknown[]) || []
@@ -46,14 +47,18 @@ function start() {
     active.value = (active.value + 1) % steps.value.length
   }, stepDelay)
 }
-function onVisibility() { if (document.hidden) stop(); else if (!observer) start() }
+function onVisibility() { if (document.hidden) stop(); else if (inView) start() }
 onMounted(() => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     active.value = Math.max(0, steps.value.length - 1)
     return
   }
   if ('IntersectionObserver' in window && root.value) {
-    observer = new IntersectionObserver(entries => entries[0]?.isIntersecting ? start() : stop(), { rootMargin: '100px' })
+    observer = new IntersectionObserver(entries => {
+      inView = entries[0]?.isIntersecting === true
+      if (inView) start()
+      else stop()
+    }, { rootMargin: '100px' })
     observer.observe(root.value)
   } else start()
   document.addEventListener('visibilitychange', onVisibility)
