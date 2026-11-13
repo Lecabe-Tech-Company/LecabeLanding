@@ -23,7 +23,7 @@ const sections = [
   {
     number: '02',
     title: 'Informações que Coletamos',
-    content: 'Coletamos apenas informações que você nos fornece diretamente: nome, e-mail, telefone, empresa, cargo e mensagens que nos envia através do formulário de contato ou WhatsApp. Também coletamos dados de navegação básicos como preferência de idioma.'
+    content: 'Coletamos apenas informações que você nos fornece diretamente: nome, e-mail, telefone, empresa, cargo e mensagens que nos envia através do formulário de contato ou WhatsApp. Também armazenamos preferências essenciais como idioma e tema. Com seu consentimento, o Google Analytics 4 coleta informações de uso do site, como páginas visualizadas e interações, para fins estatísticos.'
   },
   {
     number: '03',
@@ -38,7 +38,7 @@ const sections = [
   {
     number: '05',
     title: 'Cookies',
-    content: 'Utilizamos cookies para melhorar sua experiência no site, como lembrar sua preferência de idioma e tema (claro/escuro). Você pode controlar o uso de cookies nas configurações do seu navegador.'
+    content: 'Utilizamos armazenamento local para lembrar idioma, tema e sua escolha de privacidade. O Google Analytics 4 somente é carregado depois que você aceita o uso de analytics e poderá utilizar cookies analíticos. Você pode recusar ou alterar sua escolha no botão Privacidade disponível no site. Para remover cookies já armazenados, use os controles do navegador.'
   },
   {
     number: '06',
