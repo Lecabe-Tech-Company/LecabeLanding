@@ -5,15 +5,14 @@ import { useThemeStore } from './stores/theme'
 import { useI18n } from 'vue-i18n'
 import Header from './components/layout/Header.vue'
 import Footer from './components/layout/Footer.vue'
+import AnalyticsConsent from './components/AnalyticsConsent.vue'
 
 const themeStore = useThemeStore()
 const { t, locale } = useI18n()
 
-// Initialize theme on mount
 onMounted(() => {
   themeStore.initTheme()
-  
-  // Set initial language attribute
+
   const savedLocale = localStorage.getItem('locale') || 'pt'
   document.documentElement.lang = savedLocale
   locale.value = savedLocale
@@ -22,28 +21,19 @@ onMounted(() => {
 
 <template>
   <div class="min-h-screen flex flex-col transition-colors duration-300">
-    <!-- Skip to main content link for keyboard navigation -->
-    <a
-      href="#main-content"
-      class="skip-to-main"
-    >
+    <a href="#main-content" class="skip-to-main">
       {{ t('accessibility.skipToContent') }}
     </a>
-    
+
     <Header />
-    <main
-      id="main-content"
-      class="flex-grow"
-      role="main"
-      tabindex="-1"
-    >
+    <main id="main-content" class="flex-grow" role="main" tabindex="-1">
       <RouterView />
     </main>
     <Footer />
+    <AnalyticsConsent />
   </div>
 </template>
 
 <style scoped>
 /* Component-specific styles if needed */
 </style>
-
