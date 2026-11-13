@@ -89,12 +89,12 @@
     }
   },
   "hero": {
-    "title": "Reliez vos outils pour une activité plus fluide",
-    "subtitle": "Intégration de systèmes et automatisation sur mesure pour relier équipes, données et processus. Excel, SharePoint, Slack, Notion et vos ERP peuvent fonctionner ensemble, sans remplacer ce qui marche déjà.",
+    "title": "Intégration de systèmes, automatisation et IA pour une activité connectée",
+    "subtitle": "Nous connectons Excel, SharePoint, Slack, Notion et les outils internes pour automatiser les processus et créer des workflows intelligents.",
     "cta": "Démarrer Mon Projet",
     "ctaSecondary": "Voir Notre Processus",
     "trustedBy": "Entreprises qui font confiance à Lecabe",
-    "badge": "Ingénierie logicielle et automatisation sur mesure",
+    "badge": "Intégration de systèmes, automatisation et IA",
     "guarantees": [
       "Valorisez vos outils existants",
       "Des intégrations adaptées à vos processus",
@@ -108,7 +108,67 @@
     "diagramStep1": "Données",
     "diagramStep2": "Règles",
     "diagramStep3": "Actions",
-    "diagramCaption": "Schéma illustratif d'intégration. Aucune donnée réelle ni connexion active n'est représentée."
+    "diagramCaption": "Schéma illustratif d'intégration. Aucune donnée réelle ni connexion active n'est représentée.",
+    "workflow": {
+      "requestLabel": "DEMANDE",
+      "request": "Retrouvez le contexte du rapport demandé lors de la dernière réunion et prévenez le responsable via Slack.",
+      "thinking": "RÉFLEXION DE L'AGENT • SIMULATION",
+      "heading": "Une demande. Plusieurs systèmes. Un seul flux.",
+      "description": "Exemple illustratif : aucun compte ou fichier réel n'est utilisé.",
+      "agent": "Agent Lecabe",
+      "agentSub": "Orchestration des outils",
+      "live": "Démo interactive",
+      "report": "Rapport consolidé",
+      "statuses": {
+        "done": "Terminé",
+        "active": "En cours",
+        "todo": "En attente"
+      },
+      "steps": [
+        {
+          "icon": "stars",
+          "title": "Interpréter la demande",
+          "detail": "Comprendre le rapport et le destinataire.",
+          "thought": "Je dois récupérer le contexte de la réunion et les fichiers adaptés."
+        },
+        {
+          "icon": "api",
+          "title": "Create Report From Meeting",
+          "detail": "Appeler la skill de création du rapport.",
+          "thought": "Je vais exécuter la skill Create Report From Meeting."
+        },
+        {
+          "icon": "notion",
+          "title": "READ Notion Page",
+          "detail": "Lire la transcription de la réunion.",
+          "thought": "Je consulte la transcription dans Notion pour comprendre la demande."
+        },
+        {
+          "icon": "sharepoint",
+          "title": "Trouver le dossier SharePoint",
+          "detail": "Localiser les fichiers grâce au contexte.",
+          "thought": "J'ai le contexte. Je cherche le dossier des fichiers Excel."
+        },
+        {
+          "icon": "excel",
+          "title": "Lire trois fichiers Excel",
+          "detail": "Lister et parcourir les trois fichiers.",
+          "thought": "J'ai trouvé trois fichiers. Je les lis pour consolider les données."
+        },
+        {
+          "icon": "report",
+          "title": "Consolider le rapport",
+          "detail": "Créer un document récapitulatif.",
+          "thought": "Je rassemble les résultats dans un rapport consolidé."
+        },
+        {
+          "icon": "slack",
+          "title": "Prévenir via Slack",
+          "detail": "Envoyer le rapport au responsable.",
+          "thought": "Le rapport est prêt. Je l'envoie au responsable sur Slack."
+        }
+      ]
+    }
   },
   "about": {
     "title": "Excellence Technique et Engagement envers les Résultats",
