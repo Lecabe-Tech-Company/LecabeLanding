@@ -167,7 +167,10 @@
           "detail": "Envoyer le rapport au responsable.",
           "thought": "Le rapport est prêt. Je l'envoie au responsable sur Slack."
         }
-      ]
+      ],
+      "pause": "Pause",
+      "resume": "Continuer",
+      "replay": "Recommencer"
     }
   },
   "about": {
