@@ -39,14 +39,14 @@ const activeLabel = computed(() =>
 )
 const progress = computed(() => Math.round(((frame.value + 1) / timeline.length) * 100))
 
-const nodes: { id: string; label: string; icon: IconName; step: number; color: string }[] = [
+const nodes = computed<{ id: string; label: string; icon: IconName; step: number; color: string }[]>(() => [
   { id: 'api', label: 'Create Report From Meeting', icon: 'api', step: 1, color: '#655BEB' },
   { id: 'notion', label: 'Notion', icon: 'notion', step: 2, color: '#282B35' },
   { id: 'sharepoint', label: 'SharePoint', icon: 'sharepoint', step: 3, color: '#087FA7' },
   { id: 'excel', label: 'Excel', icon: 'excel', step: 4, color: '#16825A' },
-  { id: 'report', label: 'Relatório', icon: 'report', step: 5, color: '#655BEB' },
+  { id: 'report', label: t('hero.workflow.report'), icon: 'report', step: 5, color: '#655BEB' },
   { id: 'slack', label: 'Slack', icon: 'slack', step: 6, color: '#783E82' }
-]
+])
 // The SVG and icon centers share the same normalized 1000x620 coordinate space.
 // This prevents connector misalignment when the scene is resized.
 const connections = [
@@ -189,8 +189,8 @@ onBeforeUnmount(() => {
         <span class="font-medium text-gray-700 dark:text-gray-200">{{ activeLabel }}</span>
       </div>
       <div class="flex gap-2">
-        <button type="button" class="rounded-lg border border-gray-900/10 px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-brand-primary dark:border-white/15 dark:text-gray-300" @click="toggle">{{ paused ? 'Continuar' : 'Pausar' }}</button>
-        <button type="button" class="rounded-lg border border-gray-900/10 px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-brand-primary dark:border-white/15 dark:text-gray-300" @click="replay">Reiniciar</button>
+        <button type="button" class="rounded-lg border border-gray-900/10 px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-brand-primary dark:border-white/15 dark:text-gray-300" @click="toggle">{{ t('hero.workflow.' + (paused ? 'resume' : 'pause')) }}</button>
+        <button type="button" class="rounded-lg border border-gray-900/10 px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-brand-primary dark:border-white/15 dark:text-gray-300" @click="replay">{{ t('hero.workflow.replay') }}</button>
       </div>
     </div>
     <figcaption class="mt-3 text-center text-[11px] text-gray-500 dark:text-gray-400">{{ t('hero.workflow.description') }}</figcaption>
