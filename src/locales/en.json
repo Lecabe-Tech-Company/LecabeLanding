@@ -105,18 +105,27 @@
     }
   },
   "hero": {
-    "title": "Find out what is worth automating in your operation",
-    "subtitle": "We map your processes together with your team and show you, using data from your own day-to-day, where automation makes sense — before any proposal. With or without artificial intelligence.",
+    "title": "Turn disconnected systems into one connected operation",
+    "subtitle": "We bring tools, data and teams together in smarter workflows. Excel, SharePoint, Slack, Notion and your business systems can work together without adding yet another complicated platform.",
     "cta": "Schedule a free assessment",
     "ctaSecondary": "View our services",
     "trustedBy": "Companies that have automated with us",
-    "badge": "Free assessment · reply within 24 business hours",
+    "badge": "Custom software engineering and automation",
     "guarantees": [
-      "The code is 100% yours",
-      "Schedule defined after the assessment",
-      "Ongoing support and monitoring"
+      "Build on what already works",
+      "Integrations designed around your workflow",
+      "Technology with a purpose"
     ],
-    "whatsappMessage": "Hi! I'd like to schedule a free assessment of my company's processes."
+    "whatsappMessage": "Hi! I'd like to schedule a free assessment of my company's processes.",
+    "integrationLabel": "Examples of tools we can connect",
+    "diagramBadge": "CONCEPT",
+    "diagramEyebrow": "One architecture, multiple tools",
+    "diagramHeading": "Systems working together.",
+    "diagramHub": "Integration and automation",
+    "diagramStep1": "Data",
+    "diagramStep2": "Rules",
+    "diagramStep3": "Actions",
+    "diagramCaption": "Illustrative systems integration concept. No real data or active connections are shown."
   },
   "about": {
     "title": "Transparency from assessment to delivery",
@@ -298,7 +307,13 @@
       }
     },
     "summary": "5 stages · 6 to 14 weeks in total",
-    "durations": ["1–2 weeks", "1 week", "1–2 weeks", "2–8 weeks", "ongoing"],
+    "durations": [
+      "1–2 weeks",
+      "1 week",
+      "1–2 weeks",
+      "2–8 weeks",
+      "ongoing"
+    ],
     "guarantees": [
       {
         "title": "Full ownership",
@@ -487,7 +502,12 @@
         "title": "Eliminate manual processes with custom automation",
         "subtitle": "We transform repetitive workflows into automated systems that save time, reduce errors and free your team to focus on what truly matters.",
         "cta": "Schedule a free assessment",
-        "visualMetrics": ["Custom-built", "Integrations", "Workflows", "Dashboards"]
+        "visualMetrics": [
+          "Custom-built",
+          "Integrations",
+          "Workflows",
+          "Dashboards"
+        ]
       },
       "metrics": {
         "title": "Results from our automations",
@@ -629,7 +649,12 @@
         "title": "Your systems connected in an infrastructure that scales",
         "subtitle": "We integrate ERPs, CRMs, APIs and everyday tools so your data flows automatically — with security, monitoring and high availability.",
         "cta": "Request a free mapping",
-        "visualMetrics": ["AWS", "Integrations", "Docker", "n8n"]
+        "visualMetrics": [
+          "AWS",
+          "Integrations",
+          "Docker",
+          "n8n"
+        ]
       },
       "metrics": {
         "title": "Infrastructure that connects everything",
@@ -765,7 +790,12 @@
         "title": "Interfaces your team will actually use",
         "subtitle": "We design dashboards, control panels and operation interfaces that make your automations visible, accessible and easy to manage.",
         "cta": "Request a UX audit",
-        "visualMetrics": ["Dashboards", "Panels", "WCAG AA", "User-tested"]
+        "visualMetrics": [
+          "Dashboards",
+          "Panels",
+          "WCAG AA",
+          "User-tested"
+        ]
       },
       "metrics": {
         "title": "Interfaces your team actually adopts",
@@ -907,7 +937,12 @@
         "title": "Artificial intelligence applied to your business",
         "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence makes a difference and implement only what holds up in your context.",
         "cta": "Schedule AI consulting",
-        "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "AI Automation"]
+        "visualMetrics": [
+          "OpenAI",
+          "LangChain",
+          "Chatbots",
+          "AI Automation"
+        ]
       },
       "metrics": {
         "title": "AI that generates real returns",
@@ -1532,8 +1567,17 @@
     "lastRun": "Last run",
     "progress": "Cycle progress",
     "logTitle": "Activity log",
-    "steps": ["Orders read", "Validated", "Sent to ERP", "Invoices issued"],
-    "kpis": ["runs today", "systems integrated", "manual intervention"],
+    "steps": [
+      "Orders read",
+      "Validated",
+      "Sent to ERP",
+      "Invoices issued"
+    ],
+    "kpis": [
+      "runs today",
+      "systems integrated",
+      "manual intervention"
+    ],
     "events": [
       {
         "text": "Order #4821 read from the ERP",
@@ -1593,7 +1637,11 @@
         "24/7 monitoring and alerts",
         "Incremental migration, without stopping operations"
       ],
-      "ux": ["Operational dashboards", "Testing with real users", "WCAG AA accessibility"],
+      "ux": [
+        "Operational dashboards",
+        "Testing with real users",
+        "WCAG AA accessibility"
+      ],
       "ai": [
         "Prioritised by your case, not by hype",
         "Chatbots and language processing",
