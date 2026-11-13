@@ -184,7 +184,10 @@
           "detail": "Send the report to the manager.",
           "thought": "Report ready. Sending it to the manager on Slack."
         }
-      ]
+      ],
+      "pause": "Pause",
+      "resume": "Resume",
+      "replay": "Restart"
     }
   },
   "about": {
