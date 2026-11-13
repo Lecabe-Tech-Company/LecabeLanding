@@ -105,12 +105,12 @@
     }
   },
   "hero": {
-    "title": "Transforme sistemas dispersos em uma operação conectada",
-    "subtitle": "Integração de sistemas e automação sob medida para conectar dados, equipes e processos. Excel, SharePoint, Slack, Notion e ERPs podem trabalhar juntos — sem substituir o que já funciona.",
+    "title": "Integração de sistemas, automação e IA para uma operação conectada",
+    "subtitle": "Conectamos Excel, SharePoint, Slack, Notion e seus sistemas internos para automatizar processos, reduzir retrabalho e transformar solicitações em fluxos inteligentes.",
     "cta": "Agendar diagnóstico gratuito",
     "ctaSecondary": "Ver nossos serviços",
     "trustedBy": "Empresas que já automatizaram conosco",
-    "badge": "Engenharia de software e automação sob medida",
+    "badge": "Integração de sistemas, automação e IA",
     "guarantees": [
       "Aproveite o que já funciona",
       "Integrações pensadas para seu processo",
@@ -125,7 +125,67 @@
     "diagramStep1": "Dados",
     "diagramStep2": "Regras",
     "diagramStep3": "Ações",
-    "diagramCaption": "Visualização ilustrativa de integração entre sistemas. Não representa dados reais nem conexões ativas."
+    "diagramCaption": "Visualização ilustrativa de integração entre sistemas. Não representa dados reais nem conexões ativas.",
+    "workflow": {
+      "requestLabel": "SOLICITAÇÃO",
+      "request": "Obtenha o contexto do relatório solicitado na última reunião e comunique o gerente pelo Slack.",
+      "thinking": "PENSAMENTO DO AGENTE • SIMULAÇÃO",
+      "heading": "Uma solicitação. Vários sistemas. Um fluxo.",
+      "description": "Exemplo ilustrativo: nenhuma conta ou arquivo real é acessado.",
+      "agent": "Agente Lecabe",
+      "agentSub": "Orquestração de ferramentas",
+      "live": "Demo interativa",
+      "report": "Relatório consolidado",
+      "statuses": {
+        "done": "Concluído",
+        "active": "Executando",
+        "todo": "Aguardando"
+      },
+      "steps": [
+        {
+          "icon": "stars",
+          "title": "Interpretar a solicitação",
+          "detail": "Entender o relatório e o destinatário.",
+          "thought": "Preciso recuperar o contexto da última reunião e localizar os arquivos certos."
+        },
+        {
+          "icon": "api",
+          "title": "Create Report From Meeting",
+          "detail": "Chamar a skill de criação de relatório.",
+          "thought": "Vou executar a skill Create Report From Meeting."
+        },
+        {
+          "icon": "notion",
+          "title": "READ Notion Page",
+          "detail": "Ler a transcrição da reunião.",
+          "thought": "Agora vou consultar a transcrição do Notion para entender o pedido."
+        },
+        {
+          "icon": "sharepoint",
+          "title": "Encontrar a pasta no SharePoint",
+          "detail": "Localizar os arquivos com base no contexto.",
+          "thought": "Encontrei o contexto. Vou procurar a pasta dos arquivos Excel."
+        },
+        {
+          "icon": "excel",
+          "title": "Ler três planilhas Excel",
+          "detail": "Listar e iterar sobre os três arquivos.",
+          "thought": "Encontrei três planilhas. Vou ler cada uma e consolidar os dados."
+        },
+        {
+          "icon": "report",
+          "title": "Consolidar o relatório",
+          "detail": "Gerar um documento único.",
+          "thought": "Vou organizar os dados em um relatório consolidado."
+        },
+        {
+          "icon": "slack",
+          "title": "Comunicar pelo Slack",
+          "detail": "Enviar o relatório ao gerente.",
+          "thought": "Relatório pronto. Vou enviá-lo ao gerente no Slack."
+        }
+      ]
+    }
   },
   "about": {
     "title": "Transparência do diagnóstico à entrega",
