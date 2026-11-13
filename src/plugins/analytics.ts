@@ -30,7 +30,11 @@ export function setAnalyticsConsent(choice: Exclude<AnalyticsConsent, null>, rou
   }
 
   if (choice === 'accepted') {
-    enableAnalytics(router)
+    if (initialized) {
+      ;(window as AnalyticsWindow).gtag?.('consent', 'update', { analytics_storage: 'granted' })
+    } else {
+      enableAnalytics(router)
+    }
   } else if (initialized) {
     // Prevent further collection. An existing script cannot be unloaded safely;
     // users should also be directed to browser controls to clear existing cookies.
