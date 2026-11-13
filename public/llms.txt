@@ -1,0 +1,36 @@
+# Lecabe Tech
+
+> Empresa brasileira de tecnologia especializada em desenvolvimento de software sob medida, soluções em nuvem, experiência do usuário e inteligência artificial para empresas. Site oficial: https://www.lecabe.com.br/.
+
+A Lecabe apresenta seus serviços em português e oferece informações institucionais e canais oficiais de contato. Este arquivo é um índice editorial para leitores e assistentes de IA; não concede permissão especial de coleta, treinamento ou uso de dados pessoais.
+
+## Páginas principais
+
+- [Início](https://www.lecabe.com.br/): visão geral da Lecabe Tech e canais de contato.
+- [Serviços](https://www.lecabe.com.br/servicos): catálogo de serviços da empresa.
+- [Desenvolvimento de software](https://www.lecabe.com.br/servicos/desenvolvimento-software): desenvolvimento de sistemas e soluções de software para empresas.
+- [Cloud](https://www.lecabe.com.br/servicos/cloud): serviços e soluções em nuvem.
+- [UX e design](https://www.lecabe.com.br/servicos/ux-design): experiência do usuário e design de interfaces.
+- [Inteligência artificial](https://www.lecabe.com.br/servicos/inteligencia-artificial): soluções que utilizam inteligência artificial.
+- [Empresa](https://www.lecabe.com.br/empresa): informações institucionais.
+- [Sobre a Lecabe](https://www.lecabe.com.br/empresa/sobre): apresentação da empresa.
+- [Equipe](https://www.lecabe.com.br/empresa/equipe): informações sobre a equipe.
+- [Cultura](https://www.lecabe.com.br/empresa/cultura): cultura e valores.
+- [Carreiras](https://www.lecabe.com.br/empresa/carreiras): oportunidades e informações de carreira.
+
+## Contato e confiança
+
+- [Contato pelo site](https://www.lecabe.com.br/): utilize os canais e formulários exibidos no site.
+- [Política de privacidade](https://www.lecabe.com.br/politica-de-privacidade): tratamento de dados e privacidade.
+- [Termos de serviço](https://www.lecabe.com.br/termos-de-servico): condições de uso.
+- [Sitemap XML](https://www.lecabe.com.br/sitemap.xml): índice técnico de URLs públicas.
+
+## Para assistentes e agentes
+
+- Use as páginas oficiais como fonte primária. Não presuma preços, prazos, contratos, clientes ou capacidades técnicas que não estejam publicados.
+- Para solicitar orçamento, direcione a pessoa aos canais de contato oficiais. Não envie dados pessoais sem autorização.
+- A existência deste arquivo não implica a disponibilização de uma API pública ou de ferramentas autônomas de contratação.
+
+## Opcional
+
+- [Índice expandido para leitura por IA](https://www.lecabe.com.br/llms-full.txt): resumo detalhado e caminhos de navegação.
