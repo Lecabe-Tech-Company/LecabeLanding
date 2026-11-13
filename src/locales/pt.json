@@ -105,18 +105,27 @@
     }
   },
   "hero": {
-    "title": "Descubra o que vale automatizar na sua operação",
-    "subtitle": "Mapeamos seus processos junto com sua equipe e mostramos, com dados do seu dia a dia, onde a automação faz sentido — antes de qualquer proposta. Com ou sem inteligência artificial.",
+    "title": "Transforme sistemas dispersos em uma operação conectada",
+    "subtitle": "Conectamos ferramentas, dados e pessoas em fluxos mais inteligentes. Excel, SharePoint, Slack, Notion e seus sistemas de gestão podem trabalhar juntos, sem transformar sua operação em mais uma plataforma complicada.",
     "cta": "Agendar diagnóstico gratuito",
     "ctaSecondary": "Ver nossos serviços",
     "trustedBy": "Empresas que já automatizaram conosco",
-    "badge": "Diagnóstico gratuito · resposta em até 24h úteis",
+    "badge": "Engenharia de software e automação sob medida",
     "guarantees": [
-      "Código 100% seu",
-      "Cronograma definido após o diagnóstico",
-      "Suporte e monitoramento contínuos"
+      "Aproveite o que já funciona",
+      "Integrações pensadas para seu processo",
+      "Tecnologia com propósito"
     ],
-    "whatsappMessage": "Olá! Gostaria de agendar um diagnóstico gratuito para avaliar os processos da minha empresa."
+    "whatsappMessage": "Olá! Gostaria de agendar um diagnóstico gratuito para avaliar os processos da minha empresa.",
+    "integrationLabel": "Exemplos de ferramentas que podemos integrar",
+    "diagramBadge": "CONCEITO",
+    "diagramEyebrow": "Uma arquitetura, várias ferramentas",
+    "diagramHeading": "Tudo conversa. Tudo flui.",
+    "diagramHub": "Integração e automação",
+    "diagramStep1": "Dados",
+    "diagramStep2": "Regras",
+    "diagramStep3": "Ações",
+    "diagramCaption": "Visualização ilustrativa de integração entre sistemas. Não representa dados reais nem conexões ativas."
   },
   "about": {
     "title": "Transparência do diagnóstico à entrega",
@@ -298,7 +307,13 @@
       }
     },
     "summary": "5 etapas · total de 6 a 14 semanas",
-    "durations": ["1–2 semanas", "1 semana", "1–2 semanas", "2–8 semanas", "contínuo"],
+    "durations": [
+      "1–2 semanas",
+      "1 semana",
+      "1–2 semanas",
+      "2–8 semanas",
+      "contínuo"
+    ],
     "guarantees": [
       {
         "title": "Propriedade total",
@@ -487,7 +502,12 @@
         "title": "Elimine processos manuais com automação sob medida",
         "subtitle": "Transformamos fluxos repetitivos em sistemas automatizados que economizam tempo, reduzem erros e liberam sua equipe para o que realmente importa.",
         "cta": "Agendar diagnóstico gratuito",
-        "visualMetrics": ["Sob medida", "Integrações", "Workflows", "Dashboards"]
+        "visualMetrics": [
+          "Sob medida",
+          "Integrações",
+          "Workflows",
+          "Dashboards"
+        ]
       },
       "metrics": {
         "title": "Resultados das nossas automações",
@@ -629,7 +649,12 @@
         "title": "Seus sistemas conectados em uma infraestrutura que escala",
         "subtitle": "Integramos ERPs, CRMs, APIs e ferramentas do dia a dia para que seus dados fluam automaticamente — com segurança, monitoramento e alta disponibilidade.",
         "cta": "Solicitar mapeamento gratuito",
-        "visualMetrics": ["AWS", "Integrações", "Docker", "n8n"]
+        "visualMetrics": [
+          "AWS",
+          "Integrações",
+          "Docker",
+          "n8n"
+        ]
       },
       "metrics": {
         "title": "Infraestrutura que conecta tudo",
@@ -765,7 +790,12 @@
         "title": "Interfaces que sua equipe realmente vai usar",
         "subtitle": "Projetamos dashboards, painéis de controle e interfaces de operação que tornam suas automações visíveis, acessíveis e fáceis de gerenciar.",
         "cta": "Solicitar auditoria de UX",
-        "visualMetrics": ["Dashboards", "Painéis", "WCAG AA", "Testado com usuários"]
+        "visualMetrics": [
+          "Dashboards",
+          "Painéis",
+          "WCAG AA",
+          "Testado com usuários"
+        ]
       },
       "metrics": {
         "title": "Interfaces que sua equipe adota",
@@ -907,7 +937,12 @@
         "title": "Inteligência artificial aplicada ao seu negócio",
         "subtitle": "Não vendemos IA por modismo. Analisamos sua operação, identificamos onde a inteligência artificial faz diferença e implementamos apenas o que se sustenta no seu contexto.",
         "cta": "Agendar consultoria em IA",
-        "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "Automação IA"]
+        "visualMetrics": [
+          "OpenAI",
+          "LangChain",
+          "Chatbots",
+          "Automação IA"
+        ]
       },
       "metrics": {
         "title": "IA que gera retorno real",
@@ -1532,8 +1567,17 @@
     "lastRun": "Última execução",
     "progress": "Progresso do ciclo",
     "logTitle": "Registro de atividades",
-    "steps": ["Pedidos lidos", "Validados", "Enviados ao ERP", "Notas emitidas"],
-    "kpis": ["execuções hoje", "sistemas integrados", "intervenção manual"],
+    "steps": [
+      "Pedidos lidos",
+      "Validados",
+      "Enviados ao ERP",
+      "Notas emitidas"
+    ],
+    "kpis": [
+      "execuções hoje",
+      "sistemas integrados",
+      "intervenção manual"
+    ],
     "events": [
       {
         "text": "Pedido #4821 lido do ERP",
@@ -1593,7 +1637,11 @@
         "Monitoramento 24/7 e alertas",
         "Migração incremental, sem parar a operação"
       ],
-      "ux": ["Dashboards operacionais", "Testes com usuários reais", "Acessibilidade WCAG AA"],
+      "ux": [
+        "Dashboards operacionais",
+        "Testes com usuários reais",
+        "Acessibilidade WCAG AA"
+      ],
       "ai": [
         "Priorização pelo seu caso, não por modismo",
         "Chatbots e processamento de linguagem",
