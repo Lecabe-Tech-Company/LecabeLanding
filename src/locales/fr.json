@@ -89,11 +89,26 @@
     }
   },
   "hero": {
-    "title": "Logiciel Sur Mesure qui Accélère Votre Entreprise",
-    "subtitle": "Nous développons des solutions logicielles personnalisées qui s'intègrent parfaitement à vos processus. Du concept au déploiement, chaque projet est unique — construit avec expertise technique et attention aux détails que votre entreprise mérite.",
+    "title": "Reliez vos outils pour une activité plus fluide",
+    "subtitle": "Nous connectons les outils, les données et les équipes dans des processus mieux orchestrés. Excel, SharePoint, Slack, Notion et vos logiciels de gestion peuvent fonctionner ensemble, sans complexité inutile.",
     "cta": "Démarrer Mon Projet",
     "ctaSecondary": "Voir Notre Processus",
-    "trustedBy": "Entreprises qui font confiance à Lecabe"
+    "trustedBy": "Entreprises qui font confiance à Lecabe",
+    "badge": "Ingénierie logicielle et automatisation sur mesure",
+    "guarantees": [
+      "Valorisez vos outils existants",
+      "Des intégrations adaptées à vos processus",
+      "Une technologie qui a du sens"
+    ],
+    "integrationLabel": "Exemples d'outils que nous pouvons connecter",
+    "diagramBadge": "CONCEPT",
+    "diagramEyebrow": "Une architecture, plusieurs outils",
+    "diagramHeading": "Des systèmes qui coopèrent.",
+    "diagramHub": "Intégration et automatisation",
+    "diagramStep1": "Données",
+    "diagramStep2": "Règles",
+    "diagramStep3": "Actions",
+    "diagramCaption": "Schéma illustratif d'intégration. Aucune donnée réelle ni connexion active n'est représentée."
   },
   "about": {
     "title": "Excellence Technique et Engagement envers les Résultats",
@@ -220,14 +235,6 @@
       "documentation": {
         "title": "Documentation de Logiciels",
         "description": "Nous créons une documentation technique complète et claire pour vos systèmes, facilitant la maintenance, l'intégration de l'équipe et assurant la continuité du projet."
-      },
-      "cloud": {
-        "title": "Solutions Cloud",
-        "description": "Exploitez la puissance du cloud avec nos solutions cloud évolutives et sécurisées, conçues pour améliorer l'agilité et réduire les coûts, s'intégrant parfaitement dans votre infrastructure numérique."
-      },
-      "ux": {
-        "title": "Conception d'Expérience Utilisateur",
-        "description": "Nos experts en conception UX créent des expériences utilisateur intuitives et engageantes qui favorisent la satisfaction et la fidélité des clients, garantissant que chaque interaction est une pièce positive du parcours utilisateur."
       }
     }
   },
@@ -274,20 +281,20 @@
       "searchPlaceholder": "Rechercher des produits...",
       "category": "Catégorie",
       "allCategories": "Toutes les Catégories",
-        "categories": {
-          "all": "Tous",
-          "wms": "WMS",
-          "ai": "IA",
-          "erp": "ERP",
-          "chatbots": "Chatbots",
-          "automation": "Automatisation",
-          "analytics": "Analytics",
-          "crm": "CRM",
-          "ecommerce": "E-commerce",
-          "mobile": "Mobile",
-          "web": "Web",
-          "cloud": "Cloud"
-        },
+      "categories": {
+        "all": "Tous",
+        "wms": "WMS",
+        "ai": "IA",
+        "erp": "ERP",
+        "chatbots": "Chatbots",
+        "automation": "Automatisation",
+        "analytics": "Analytics",
+        "crm": "CRM",
+        "ecommerce": "E-commerce",
+        "mobile": "Mobile",
+        "web": "Web",
+        "cloud": "Cloud"
+      },
       "sortBy": "Trier par",
       "sort": {
         "popular": "Plus Populaires",
@@ -1199,4 +1206,3 @@
     "lastUpdated": "Dernière mise à jour"
   }
 }
-
