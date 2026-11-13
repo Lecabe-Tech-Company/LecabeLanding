@@ -22,6 +22,12 @@ const timeline = [
   { step: 5 }, { step: 6 }, { step: 7 }
 ]
 const filenames = ['01.xlsx', '02.xlsx', '03.xlsx']
+const brandLogoPaths: Record<string, string> = {
+  notion: '/brand-icons/notion.svg',
+  sharepoint: '/brand-icons/sharepoint.svg',
+  excel: '/brand-icons/excel.svg',
+  slack: '/brand-icons/slack.svg'
+}
 const currentStep = computed(() => timeline[frame.value]?.step ?? 0)
 const currentFile = computed(() => timeline[frame.value]?.file ?? 0)
 const steps = computed(() => {
@@ -119,12 +125,23 @@ onBeforeUnmount(() => {
 
 <template>
   <figure ref="root" class="workflow-showcase relative w-full" aria-label="Demonstração de fluxo automatizado com agente de inteligência artificial">
-    <div class="mx-auto max-w-[830px] text-center">
-      <p class="text-[11px] font-bold uppercase tracking-[.18em] text-brand-primary">{{ t('hero.workflow.requestLabel') }}</p>
-      <p class="mt-2 text-[15px] font-medium leading-relaxed text-gray-700 dark:text-gray-200 sm:text-[17px]">
-        “{{ t('hero.workflow.request') }}”
-      </p>
-    </div>
+    <button type="button"
+      class="workflow-request relative mx-auto flex w-full max-w-[800px] items-start gap-4 rounded-2xl border border-gray-900/10 bg-white px-4 py-4 text-left shadow-[0_10px_35px_rgba(25,30,60,.045)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary dark:border-white/15 dark:bg-[#1B2031] sm:items-center sm:px-5"
+      :data-state="stepState(0)" @click="jump(0)"
+      :aria-label="t('hero.workflow.requestLabel') + ': ' + t('hero.workflow.request')"
+    >
+      <span class="relative grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-primary/[.09] text-brand-primary dark:bg-brand-light-primary/15 dark:text-brand-light-primary">
+        <WorkflowBrandIcon name="user" :size="24" />
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-[10px] font-bold uppercase tracking-[.13em] text-gray-500 dark:text-gray-400">{{ t('hero.workflow.requestLabel') }}</span>
+        <span class="mt-1 block text-[13px] font-semibold leading-relaxed text-gray-800 dark:text-gray-100 sm:text-[15px]">
+          “{{ t('hero.workflow.request') }}”
+        </span>
+      </span>
+      <span v-if="stepState(0) === 'done'" class="node-status node-status--done" aria-hidden="true">✓</span>
+      <span v-else-if="stepState(0) === 'active'" class="node-status node-status--active" aria-hidden="true"><span class="workflow-spinner" /></span>
+    </button>
 
     <div class="workflow-scene relative mx-auto mt-7 w-full max-w-[1150px]">
       <svg class="workflow-connections pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1000 620" preserveAspectRatio="none" fill="none" aria-hidden="true">
@@ -140,10 +157,6 @@ onBeforeUnmount(() => {
       </svg>
 
       <div class="workflow-thought rounded-2xl border border-brand-primary/15 bg-white px-5 py-3.5 text-center shadow-[0_12px_35px_rgba(38,32,84,.06)] dark:border-white/15 dark:bg-[#1B2033]">
-        <div class="mb-1 flex items-center justify-center gap-1.5 text-[10px] font-bold uppercase tracking-[.12em] text-brand-primary dark:text-brand-light-primary">
-          <WorkflowBrandIcon name="stars" :size="15" />
-          {{ t('hero.workflow.thinking') }}
-        </div>
         <p class="text-[13px] font-medium leading-relaxed text-gray-700 dark:text-gray-200">{{ thought }}</p>
       </div>
 
@@ -164,7 +177,8 @@ onBeforeUnmount(() => {
         >
           <span class="node-icon grid h-10 w-10 shrink-0 place-items-center rounded-xl"
             :style="{ color: node.color, backgroundColor: node.id === 'notion' ? '#F3F4F6' : node.id === 'excel' ? '#E4F6ED' : node.id === 'sharepoint' ? '#E2F4FB' : node.id === 'slack' ? '#F5E7F4' : '#ECEAFF' }">
-            <WorkflowBrandIcon :name="node.icon" :size="22" />
+            <img v-if="brandLogoPaths[node.id]" :src="brandLogoPaths[node.id]" width="26" height="26" alt="" class="h-[26px] w-[26px] object-contain" decoding="async" />
+            <WorkflowBrandIcon v-else :name="node.icon" :size="22" />
           </span>
           <span class="min-w-0">
             <strong class="block text-[12px] font-bold leading-snug text-gray-900 dark:text-white sm:text-[13px]">{{ node.label }}</strong>
@@ -211,7 +225,8 @@ onBeforeUnmount(() => {
 .workflow-node--excel { left:79%; top:80.6452%; }
 .workflow-node--report { left:50%; top:88.7097%; }
 .workflow-node--slack { left:21%; top:80.6452%; }
-.workflow-node[data-state='done'] { border-color:#3BC98D; }
+.workflow-node[data-state='done'],.workflow-request[data-state='done'] { border-color:#3BC98D; }
+.workflow-request[data-state='active'] { animation:workflow-blue 1.25s ease-in-out infinite; }
 .workflow-node[data-state='active'] { animation:workflow-blue 1.25s ease-in-out infinite; }
 .node-status { position:absolute; top:-7px; right:-7px; display:grid; place-items:center; width:20px; height:20px; border-radius:50%; font-size:11px; color:white; font-weight:800; }
 .node-status--done { background:#22B77E; }
@@ -234,6 +249,6 @@ onBeforeUnmount(() => {
   .node-files { display:none; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .workflow-node[data-state='active'],.workflow-spinner,.flow-current-line { animation:none; }
+  .workflow-node[data-state='active'],.workflow-request[data-state='active'],.workflow-spinner,.flow-current-line { animation:none; }
 }
 </style>
