@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import WorkflowBrandIcon from '@/components/ui/WorkflowBrandIcon.vue'
 
-type IconName = 'excel' | 'sharepoint' | 'notion' | 'api' | 'slack' | 'stars' | 'report'
+type IconName = 'excel' | 'sharepoint' | 'notion' | 'api' | 'slack' | 'stars' | 'report' | 'user'
 type State = 'done' | 'active' | 'todo'
 
 const { t, tm } = useI18n()
@@ -39,13 +39,16 @@ const steps = computed(() => {
   }))
 })
 const allDone = computed(() => currentStep.value >= steps.value.length && steps.value.length > 0)
-const thought = computed(() => steps.value[allDone.value ? steps.value.length - 1 : currentStep.value]?.thought || '')
+const thought = computed(() => currentStep.value === 0
+  ? t('hero.workflow.request')
+  : steps.value[allDone.value ? steps.value.length - 1 : currentStep.value]?.thought || '')
 const activeLabel = computed(() =>
   allDone.value ? t('hero.workflow.statuses.done') : steps.value[currentStep.value]?.title || ''
 )
 const progress = computed(() => Math.round(((frame.value + 1) / timeline.length) * 100))
 
 const nodes = computed<{ id: string; label: string; icon: IconName; step: number; color: string }[]>(() => [
+  { id: 'user', label: t('hero.workflow.requestLabel'), icon: 'user', step: 0, color: '#655BEB' },
   { id: 'api', label: 'Create Report From Meeting', icon: 'api', step: 1, color: '#655BEB' },
   { id: 'notion', label: 'Notion', icon: 'notion', step: 2, color: '#282B35' },
   { id: 'sharepoint', label: 'SharePoint', icon: 'sharepoint', step: 3, color: '#087FA7' },
@@ -56,6 +59,7 @@ const nodes = computed<{ id: string; label: string; icon: IconName; step: number
 // The SVG and icon centers share the same normalized 1000x620 coordinate space.
 // This prevents connector misalignment when the scene is resized.
 const connections = [
+  { id: 'user', step: 0, d: 'M500 320 C355 320 250 320 130 320' },
   { id: 'api', step: 1, d: 'M500 320 C385 315 320 168 185 168' },
   { id: 'notion', step: 2, d: 'M500 320 C615 315 680 168 815 168' },
   { id: 'sharepoint', step: 3, d: 'M500 320 C670 320 735 320 870 320' },
@@ -125,24 +129,6 @@ onBeforeUnmount(() => {
 
 <template>
   <figure ref="root" class="workflow-showcase relative w-full" aria-label="Demonstração de fluxo automatizado com agente de inteligência artificial">
-    <button type="button"
-      class="workflow-request relative mx-auto flex w-full max-w-[800px] items-start gap-4 rounded-2xl border border-gray-900/10 bg-white px-4 py-4 text-left shadow-[0_10px_35px_rgba(25,30,60,.045)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary dark:border-white/15 dark:bg-[#1B2031] sm:items-center sm:px-5"
-      :data-state="stepState(0)" @click="jump(0)"
-      :aria-label="t('hero.workflow.requestLabel') + ': ' + t('hero.workflow.request')"
-    >
-      <span class="relative grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-primary/[.09] text-brand-primary dark:bg-brand-light-primary/15 dark:text-brand-light-primary">
-        <WorkflowBrandIcon name="user" :size="24" />
-      </span>
-      <span class="min-w-0 flex-1">
-        <span class="block text-[10px] font-bold uppercase tracking-[.13em] text-gray-500 dark:text-gray-400">{{ t('hero.workflow.requestLabel') }}</span>
-        <span class="mt-1 block text-[13px] font-semibold leading-relaxed text-gray-800 dark:text-gray-100 sm:text-[15px]">
-          “{{ t('hero.workflow.request') }}”
-        </span>
-      </span>
-      <span v-if="stepState(0) === 'done'" class="node-status node-status--done" aria-hidden="true">✓</span>
-      <span v-else-if="stepState(0) === 'active'" class="node-status node-status--active" aria-hidden="true"><span class="workflow-spinner" /></span>
-    </button>
-
     <div class="workflow-scene relative mx-auto mt-7 w-full max-w-[1150px]">
       <svg class="workflow-connections pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1000 620" preserveAspectRatio="none" fill="none" aria-hidden="true">
         <circle cx="500" cy="320" r="115" stroke="#675DEA" stroke-opacity=".10" />
@@ -172,7 +158,7 @@ onBeforeUnmount(() => {
         <button v-for="node in nodes" :key="node.id" type="button"
           class="workflow-node group flex items-center gap-3 rounded-2xl border border-gray-900/10 bg-white px-3 py-2.5 text-left shadow-[0_7px_25px_rgba(20,24,55,.05)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary dark:border-white/15 dark:bg-[#1B2031]"
           :class="'workflow-node--' + node.id" :data-state="stepState(node.step)"
-          :aria-label="node.label + ' — ' + t('hero.workflow.statuses.' + stepState(node.step))"
+          :aria-label="node.id === 'user' ? t('hero.workflow.requestLabel') + ': ' + t('hero.workflow.request') : node.label + ' — ' + t('hero.workflow.statuses.' + stepState(node.step))"
           @click="jump(node.step)"
         >
           <span class="node-icon grid h-10 w-10 shrink-0 place-items-center rounded-xl"
@@ -219,14 +205,14 @@ onBeforeUnmount(() => {
 .workflow-thought::after { content:''; position:absolute; left:50%; bottom:-9px; width:17px; height:17px; transform:translateX(-50%) rotate(45deg); background:inherit; border-right:1px solid rgba(105,93,234,.12); border-bottom:1px solid rgba(105,93,234,.12); }
 .workflow-nodes { position:absolute; inset:0; }
 .workflow-node { position:absolute; z-index:2; width:165px; min-height:70px; transform:translate(-50%,-50%); }
+.workflow-node--user { left:13%; top:51.6129%; }
 .workflow-node--api { left:18.5%; top:27.0968%; width:210px; }
 .workflow-node--notion { left:81.5%; top:27.0968%; }
 .workflow-node--sharepoint { left:87%; top:51.6129%; }
 .workflow-node--excel { left:79%; top:80.6452%; }
 .workflow-node--report { left:50%; top:88.7097%; }
 .workflow-node--slack { left:21%; top:80.6452%; }
-.workflow-node[data-state='done'],.workflow-request[data-state='done'] { border-color:#3BC98D; }
-.workflow-request[data-state='active'] { animation:workflow-blue 1.25s ease-in-out infinite; }
+.workflow-node[data-state='done'] { border-color:#3BC98D; }
 .workflow-node[data-state='active'] { animation:workflow-blue 1.25s ease-in-out infinite; }
 .node-status { position:absolute; top:-7px; right:-7px; display:grid; place-items:center; width:20px; height:20px; border-radius:50%; font-size:11px; color:white; font-weight:800; }
 .node-status--done { background:#22B77E; }
@@ -245,10 +231,11 @@ onBeforeUnmount(() => {
   .workflow-nodes { position:relative; inset:auto; order:2; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; gap:12px; }
   .workflow-node,.workflow-node--api { position:relative; left:auto; top:auto; transform:none; width:100%; min-height:74px; }
   .workflow-node { padding:9px; gap:8px; }
+  .workflow-node--user { grid-column:1 / -1; justify-self:center; max-width:280px; }
   .workflow-node .node-icon { width:35px; height:35px; }
   .node-files { display:none; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .workflow-node[data-state='active'],.workflow-request[data-state='active'],.workflow-spinner,.flow-current-line { animation:none; }
+  .workflow-node[data-state='active'],.workflow-spinner,.flow-current-line { animation:none; }
 }
 </style>
