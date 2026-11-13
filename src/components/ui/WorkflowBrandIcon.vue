@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ name: 'excel'|'sharepoint'|'notion'|'api'|'slack'|'stars'|'report'; size?: number }>()
+defineProps<{ name: 'excel'|'sharepoint'|'notion'|'api'|'slack'|'stars'|'report'|'user'; size?: number }>()
 </script>
 
 <template>
@@ -18,6 +18,10 @@ defineProps<{ name: 'excel'|'sharepoint'|'notion'|'api'|'slack'|'stars'|'report'
     </template>
     <template v-else-if="name === 'api'">
       <path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/>
+    </template>
+    <template v-else-if="name === 'user'">
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M4.7 20v-1.5c0-3.3 3.1-5.5 7.3-5.5s7.3 2.2 7.3 5.5V20" />
     </template>
     <template v-else-if="name === 'stars'">
       <path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5L10 13l-6.5-2L10 9zM20 17l.6 1.6L22 19l-1.4.5L20 21l-.5-1.5-1.5-.5 1.5-.4z" />
